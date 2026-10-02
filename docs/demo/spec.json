@@ -1,0 +1,15 @@
+{
+  "title": "autofwd: automatic port forwarding in herdr",
+  "cols": 132,
+  "rows": 30,
+  "frames": [
+    { "file": "frames/01.ansi", "caption": "Your server, saved as a machine in herdr. Nothing is forwarded yet: ⇄ no ports", "seconds": 3 },
+    { "file": "frames/02.ansi", "caption": "Start anything that listens: it's on your computer's localhost:8000 a moment later (⇄ 8000)", "seconds": 3.5 },
+    { "file": "frames/03.ansi", "caption": "ctrl+b f opens the Ports panel: every forward, on every machine", "seconds": 3.5 },
+    { "file": "frames/04.ansi", "caption": "gpu-box wants port 8000 too: it gets 8001, and the panel says why", "seconds": 4.5 },
+    { "file": "frames/05.ansi", "caption": "Edit it (e): a taken port is refused with who has it. Nothing breaks", "seconds": 4.5 },
+    { "file": "frames/06.ansi", "caption": "Pick a free one and it moves: localhost:8080", "seconds": 3 },
+    { "file": "frames/07.ansi", "caption": "+ adds a forward: any port, or any host:port the server can reach", "seconds": 3.5 },
+    { "file": "frames/08.ansi", "caption": "Done: the server's port 9000 is on localhost:9000", "seconds": 3 }
+  ]
+}

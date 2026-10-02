@@ -1,0 +1,1391 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1141" height="644" viewBox="0 0 1141 644" role="img" xml:space="preserve">
+<title>autofwd: automatic port forwarding in herdr</title>
+<style>
+text{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"DejaVu Sans Mono",monospace;font-size:14px;fill:#cdd6f4;white-space:pre}
+.b{font-weight:700}.i{font-style:italic}.u{text-decoration:underline}.d{opacity:.55}
+.cap{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;font-size:16px}.n{font-size:13px;fill:#a6adc8}
+.k0{fill:#6c7086}.k1{fill:#1e1e2e}.k2{fill:#181825}.k3{fill:#7f849c}.k4{fill:#89b4fa}.k5{fill:#a6e3a1}.k6{fill:#a6adc8}.k7{fill:#000000}.k8{fill:#ffffff}.k9{fill:#94e2d5}.k10{fill:#f9e2af}.k11{fill:#f38ba8}.k12{fill:#f5c2e7}
+.f{animation:28.5s linear infinite}
+.a0{animation-name:a0}@keyframes a0{0%{opacity:1}9.649%{opacity:1}10.526%{opacity:0}99.123%{opacity:0}100%{opacity:1}}
+.a1{animation-name:a1}@keyframes a1{0%{opacity:0}9.649%{opacity:0}10.526%{opacity:1}21.93%{opacity:1}22.807%{opacity:0}100%{opacity:0}}
+.a2{animation-name:a2}@keyframes a2{0%{opacity:0}21.93%{opacity:0}22.807%{opacity:1}34.211%{opacity:1}35.088%{opacity:0}100%{opacity:0}}
+.a3{animation-name:a3}@keyframes a3{0%{opacity:0}34.211%{opacity:0}35.088%{opacity:1}50%{opacity:1}50.877%{opacity:0}100%{opacity:0}}
+.a4{animation-name:a4}@keyframes a4{0%{opacity:0}50%{opacity:0}50.877%{opacity:1}65.789%{opacity:1}66.667%{opacity:0}100%{opacity:0}}
+.a5{animation-name:a5}@keyframes a5{0%{opacity:0}65.789%{opacity:0}66.667%{opacity:1}76.316%{opacity:1}77.193%{opacity:0}100%{opacity:0}}
+.a6{animation-name:a6}@keyframes a6{0%{opacity:0}76.316%{opacity:0}77.193%{opacity:1}88.596%{opacity:1}89.474%{opacity:0}100%{opacity:0}}
+.a7{animation-name:a7}@keyframes a7{0%{opacity:0}88.596%{opacity:0}89.474%{opacity:1}99.123%{opacity:1}100%{opacity:0}}
+</style>
+<rect width="1141" height="644" rx="10" fill="#181825"/>
+<rect y="32" width="1141" height="564" fill="#1e1e2e"/>
+<path d="M0 32.5H1141M0 595.5H1141" stroke="#313244"/>
+<rect x=".5" y=".5" width="1140" height="643" rx="9.5" fill="none" stroke="#313244"/>
+<circle cx="20" cy="16" r="6" fill="#f38ba8"/><circle cx="40" cy="16" r="6" fill="#f9e2af"/><circle cx="60" cy="16" r="6" fill="#a6e3a1"/>
+<circle cx="987" cy="620" r="3.5" fill="#585b70"/><circle cx="999" cy="620" r="3.5" fill="#585b70"/><circle cx="1011" cy="620" r="3.5" fill="#585b70"/><circle cx="1023" cy="620" r="3.5" fill="#585b70"/><circle cx="1035" cy="620" r="3.5" fill="#585b70"/><circle cx="1047" cy="620" r="3.5" fill="#585b70"/><circle cx="1059" cy="620" r="3.5" fill="#585b70"/><circle cx="1071" cy="620" r="3.5" fill="#585b70"/>
+<g class="f a0">
+<g transform="translate(16,44)">
+<g shape-rendering="crispEdges">
+<rect x="218.4" y="0" width="67.2" height="18" class="k4"/>
+<rect x="285.6" y="0" width="823.2" height="18" class="k2"/>
+</g>
+<text x="8.4" y="13" textLength="67.2" lengthAdjust="spacingAndGlyphs" class="k0 b">machines</text>
+<text x="210" y="13" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="243.6" y="13" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k2">1</text>
+<text x="302.4" y="13" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k3">+</text>
+<text x="1024.8" y="13" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k3">⇄</text>
+<text x="1041.6" y="13" textLength="67.2" lengthAdjust="spacingAndGlyphs" class="k3">no ports</text>
+<text x="210" y="31" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="218.4" y="31" textLength="134.4" lengthAdjust="spacingAndGlyphs" class="k5 b">dev@61f23506d7b7</text>
+<text x="352.8" y="31" textLength="8.4" lengthAdjust="spacingAndGlyphs">:</text>
+<text x="361.2" y="31" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4 b">~</text>
+<text x="369.6" y="31" textLength="8.4" lengthAdjust="spacingAndGlyphs">$</text>
+<text x="8.4" y="49" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">▾</text>
+<text x="25.2" y="49" textLength="42" lengthAdjust="spacingAndGlyphs" class="b">Local</text>
+<text x="210" y="49" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="25.2" y="67" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k0">·</text>
+<text x="42" y="67" textLength="109.2" lengthAdjust="spacingAndGlyphs" class="k6">herdr-autofwd</text>
+<text x="210" y="67" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="8.4" y="85" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">▾</text>
+<text x="25.2" y="85" textLength="84" lengthAdjust="spacingAndGlyphs" class="b">dev-server</text>
+<text x="201.6" y="85" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k5">●</text>
+<text x="210" y="85" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="25.2" y="103" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k0">·</text>
+<text x="42" y="103" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">~</text>
+<text x="210" y="103" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="8.4" y="121" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">▾</text>
+<text x="25.2" y="121" textLength="58.8" lengthAdjust="spacingAndGlyphs" class="b">gpu-box</text>
+<text x="201.6" y="121" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k5">●</text>
+<text x="210" y="121" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="25.2" y="139" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k0">·</text>
+<text x="42" y="139" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k6">~</text>
+<text x="210" y="139" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="210" y="157" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="210" y="175" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="210" y="193" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="210" y="211" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="210" y="229" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="210" y="247" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="8.4" y="265" textLength="25.2" lengthAdjust="spacingAndGlyphs" class="k0">new</text>
+<text x="42" y="265" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k0">·</text>
+<text x="58.8" y="265" textLength="84" lengthAdjust="spacingAndGlyphs" class="k0">dev-server</text>
+<text x="176.4" y="265" textLength="33.6" lengthAdjust="spacingAndGlyphs" class="k0">menu</text>
+<text x="210" y="265" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="0" y="283" textLength="218.4" lengthAdjust="spacingAndGlyphs" class="k1">─────────────────────────│</text>
+<text x="8.4" y="301" textLength="50.4" lengthAdjust="spacingAndGlyphs" class="k0 b">agents</text>
+<text x="151.2" y="301" textLength="58.8" lengthAdjust="spacingAndGlyphs" class="k0 b">grouped</text>
+<text x="210" y="301" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="210" y="319" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="210" y="337" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="210" y="355" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="210" y="373" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="210" y="391" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="210" y="409" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="210" y="427" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="210" y="445" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="210" y="463" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="210" y="481" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="210" y="499" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="210" y="517" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="201.6" y="535" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k0">«</text>
+<text x="210" y="535" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+</g>
+<text class="cap" x="16" y="626">Your server, saved as a machine in herdr. Nothing is forwarded yet: ⇄ no ports</text>
+<text class="n" x="1125" y="626" text-anchor="end">1 / 8</text>
+<circle cx="987" cy="620" r="3.5" fill="#89b4fa"/>
+</g>
+<g class="f a1" opacity="0">
+<g transform="translate(16,44)">
+<g shape-rendering="crispEdges">
+<rect x="218.4" y="0" width="67.2" height="18" class="k4"/>
+<rect x="285.6" y="0" width="823.2" height="18" class="k2"/>
+</g>
+<text x="8.4" y="13" textLength="67.2" lengthAdjust="spacingAndGlyphs" class="k0 b">machines</text>
+<text x="210" y="13" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="243.6" y="13" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k2">1</text>
+<text x="302.4" y="13" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k3">+</text>
+<text x="1058.4" y="13" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k3">⇄</text>
+<text x="1075.2" y="13" textLength="33.6" lengthAdjust="spacingAndGlyphs" class="k3">8000</text>
+<text x="210" y="31" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="218.4" y="31" textLength="134.4" lengthAdjust="spacingAndGlyphs" class="k5 b">dev@61f23506d7b7</text>
+<text x="352.8" y="31" textLength="8.4" lengthAdjust="spacingAndGlyphs">:</text>
+<text x="361.2" y="31" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4 b">~</text>
+<text x="369.6" y="31" textLength="134.4" lengthAdjust="spacingAndGlyphs">$ python3 app.py</text>
+<text x="8.4" y="49" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">▾</text>
+<text x="25.2" y="49" textLength="42" lengthAdjust="spacingAndGlyphs" class="b">Local</text>
+<text x="210" y="49" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="235.2" y="49" textLength="310.8" lengthAdjust="spacingAndGlyphs">App running at http://localhost:8000/</text>
+<text x="25.2" y="67" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k0">·</text>
+<text x="42" y="67" textLength="109.2" lengthAdjust="spacingAndGlyphs" class="k6">herdr-autofwd</text>
+<text x="210" y="67" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="8.4" y="85" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">▾</text>
+<text x="25.2" y="85" textLength="84" lengthAdjust="spacingAndGlyphs" class="b">dev-server</text>
+<text x="201.6" y="85" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k5">●</text>
+<text x="210" y="85" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="25.2" y="103" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k0">·</text>
+<text x="42" y="103" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">~</text>
+<text x="210" y="103" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="8.4" y="121" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">▾</text>
+<text x="25.2" y="121" textLength="58.8" lengthAdjust="spacingAndGlyphs" class="b">gpu-box</text>
+<text x="201.6" y="121" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k5">●</text>
+<text x="210" y="121" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="25.2" y="139" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k0">·</text>
+<text x="42" y="139" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k6">~</text>
+<text x="210" y="139" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="210" y="157" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="210" y="175" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="210" y="193" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="210" y="211" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="210" y="229" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="210" y="247" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="8.4" y="265" textLength="25.2" lengthAdjust="spacingAndGlyphs" class="k0">new</text>
+<text x="42" y="265" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k0">·</text>
+<text x="58.8" y="265" textLength="84" lengthAdjust="spacingAndGlyphs" class="k0">dev-server</text>
+<text x="176.4" y="265" textLength="33.6" lengthAdjust="spacingAndGlyphs" class="k0">menu</text>
+<text x="210" y="265" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="0" y="283" textLength="218.4" lengthAdjust="spacingAndGlyphs" class="k1">─────────────────────────│</text>
+<text x="8.4" y="301" textLength="50.4" lengthAdjust="spacingAndGlyphs" class="k0 b">agents</text>
+<text x="151.2" y="301" textLength="58.8" lengthAdjust="spacingAndGlyphs" class="k0 b">grouped</text>
+<text x="210" y="301" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="210" y="319" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="210" y="337" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="210" y="355" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="210" y="373" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="210" y="391" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="210" y="409" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="210" y="427" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="210" y="445" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="210" y="463" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="210" y="481" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="210" y="499" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="210" y="517" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="201.6" y="535" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k0">«</text>
+<text x="210" y="535" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+</g>
+<text class="cap" x="16" y="626">Start anything that listens: it's on your computer's localhost:8000 a moment later (⇄ 8000)</text>
+<text class="n" x="1125" y="626" text-anchor="end">2 / 8</text>
+<circle cx="999" cy="620" r="3.5" fill="#89b4fa"/>
+</g>
+<g class="f a2" opacity="0">
+<g transform="translate(16,44)">
+<g shape-rendering="crispEdges">
+<rect x="218.4" y="0" width="67.2" height="18" class="k4"/>
+<rect x="285.6" y="0" width="823.2" height="18" class="k2"/>
+<rect x="260.4" y="90" width="798" height="18" class="k2"/>
+<rect x="260.4" y="108" width="8.4" height="18" class="k2"/>
+<rect x="268.8" y="108" width="75.6" height="18" class="k8"/>
+<rect x="1041.6" y="108" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="126" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="126" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="144" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="144" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="162" width="8.4" height="18" class="k2"/>
+<rect x="268.8" y="162" width="33.6" height="18" class="k8"/>
+<rect x="302.4" y="162" width="16.8" height="18" class="k5"/>
+<rect x="319.2" y="162" width="168" height="18" class="k8"/>
+<rect x="487.2" y="162" width="151.2" height="18" class="k9"/>
+<rect x="638.4" y="162" width="403.2" height="18" class="k8"/>
+<rect x="1041.6" y="162" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="180" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="180" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="198" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="198" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="216" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="216" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="234" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="234" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="252" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="252" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="270" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="270" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="288" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="288" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="306" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="306" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="324" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="324" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="342" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="342" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="360" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="360" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="378" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="378" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="396" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="396" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="414" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="414" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="432" width="798" height="18" class="k2"/>
+</g>
+<text x="8.4" y="13" textLength="67.2" lengthAdjust="spacingAndGlyphs" class="k0 b">machines</text>
+<text x="210" y="13" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="243.6" y="13" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k2">1</text>
+<text x="302.4" y="13" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k3">+</text>
+<text x="1058.4" y="13" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k3">⇄</text>
+<text x="1075.2" y="13" textLength="33.6" lengthAdjust="spacingAndGlyphs" class="k3">8000</text>
+<text x="210" y="31" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="218.4" y="31" textLength="134.4" lengthAdjust="spacingAndGlyphs" class="k5 b">dev@61f23506d7b7</text>
+<text x="352.8" y="31" textLength="8.4" lengthAdjust="spacingAndGlyphs">:</text>
+<text x="361.2" y="31" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4 b">~</text>
+<text x="369.6" y="31" textLength="134.4" lengthAdjust="spacingAndGlyphs">$ python3 app.py</text>
+<text x="8.4" y="49" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">▾</text>
+<text x="25.2" y="49" textLength="42" lengthAdjust="spacingAndGlyphs" class="b">Local</text>
+<text x="210" y="49" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="235.2" y="49" textLength="310.8" lengthAdjust="spacingAndGlyphs">App running at http://localhost:8000/</text>
+<text x="25.2" y="67" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k0">·</text>
+<text x="42" y="67" textLength="109.2" lengthAdjust="spacingAndGlyphs" class="k6">herdr-autofwd</text>
+<text x="210" y="67" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="8.4" y="85" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">▾</text>
+<text x="25.2" y="85" textLength="84" lengthAdjust="spacingAndGlyphs" class="b">dev-server</text>
+<text x="201.6" y="85" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k5">●</text>
+<text x="210" y="85" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="25.2" y="103" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k0">·</text>
+<text x="42" y="103" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">~</text>
+<text x="210" y="103" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="103" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">┌</text>
+<text x="268.8" y="103" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">⇄</text>
+<text x="285.6" y="103" textLength="772.8" lengthAdjust="spacingAndGlyphs" class="k4">Ports──────────────────────────────────────────────────────────────────────────────────────┐</text>
+<text x="8.4" y="121" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">▾</text>
+<text x="25.2" y="121" textLength="58.8" lengthAdjust="spacingAndGlyphs" class="b">gpu-box</text>
+<text x="201.6" y="121" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k5">●</text>
+<text x="210" y="121" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="121" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="277.2" y="121" textLength="58.8" lengthAdjust="spacingAndGlyphs" class="k7 b">Ports 1</text>
+<text x="361.2" y="121" textLength="84" lengthAdjust="spacingAndGlyphs" class="d">Machines 2</text>
+<text x="991.2" y="121" textLength="50.4" lengthAdjust="spacingAndGlyphs" class="d">? help</text>
+<text x="1050" y="121" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="25.2" y="139" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k0">·</text>
+<text x="42" y="139" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k6">~</text>
+<text x="210" y="139" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="139" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="277.2" y="139" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k5">●</text>
+<text x="294" y="139" textLength="84" lengthAdjust="spacingAndGlyphs" class="b">dev-server</text>
+<text x="403.2" y="139" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k5">●</text>
+<text x="420" y="139" textLength="58.8" lengthAdjust="spacingAndGlyphs" class="b">gpu-box</text>
+<text x="1050" y="139" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="157" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="157" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="310.8" y="157" textLength="58.8" lengthAdjust="spacingAndGlyphs" class="d">MACHINE</text>
+<text x="411.6" y="157" textLength="50.4" lengthAdjust="spacingAndGlyphs" class="d">REMOTE</text>
+<text x="478.8" y="157" textLength="109.2" lengthAdjust="spacingAndGlyphs" class="d">LOCAL ADDRESS</text>
+<text x="630" y="157" textLength="58.8" lengthAdjust="spacingAndGlyphs" class="d">PROCESS</text>
+<text x="764.4" y="157" textLength="33.6" lengthAdjust="spacingAndGlyphs" class="d">NOTE</text>
+<text x="1050" y="157" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="175" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="175" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="277.2" y="175" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k7 b">›</text>
+<text x="302.4" y="175" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k7">●</text>
+<text x="319.2" y="175" textLength="84" lengthAdjust="spacingAndGlyphs" class="k7">dev-server</text>
+<text x="420" y="175" textLength="33.6" lengthAdjust="spacingAndGlyphs" class="k7 b">8000</text>
+<text x="487.2" y="175" textLength="117.6" lengthAdjust="spacingAndGlyphs" class="k7">localhost:8000</text>
+<text x="638.4" y="175" textLength="58.8" lengthAdjust="spacingAndGlyphs" class="k7">python3</text>
+<text x="1050" y="175" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="193" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="193" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="302.4" y="193" textLength="126" lengthAdjust="spacingAndGlyphs" class="d">+ Add a forward</text>
+<text x="1050" y="193" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="211" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="211" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="1050" y="211" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="229" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="229" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="1050" y="229" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="247" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="247" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="1050" y="247" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="8.4" y="265" textLength="25.2" lengthAdjust="spacingAndGlyphs" class="k0">new</text>
+<text x="42" y="265" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k0">·</text>
+<text x="58.8" y="265" textLength="84" lengthAdjust="spacingAndGlyphs" class="k0">dev-server</text>
+<text x="176.4" y="265" textLength="33.6" lengthAdjust="spacingAndGlyphs" class="k0">menu</text>
+<text x="210" y="265" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="265" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="1050" y="265" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="0" y="283" textLength="218.4" lengthAdjust="spacingAndGlyphs" class="k1">─────────────────────────│</text>
+<text x="260.4" y="283" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="1050" y="283" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="8.4" y="301" textLength="50.4" lengthAdjust="spacingAndGlyphs" class="k0 b">agents</text>
+<text x="151.2" y="301" textLength="58.8" lengthAdjust="spacingAndGlyphs" class="k0 b">grouped</text>
+<text x="210" y="301" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="301" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="1050" y="301" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="319" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="319" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="1050" y="319" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="337" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="337" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="1050" y="337" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="355" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="355" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="1050" y="355" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="373" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="373" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="1050" y="373" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="391" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="391" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="1050" y="391" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="409" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="409" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="1050" y="409" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="427" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="427" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="277.2" y="427" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">↵</text>
+<text x="294" y="427" textLength="33.6" lengthAdjust="spacingAndGlyphs" class="d">open</text>
+<text x="344.4" y="427" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">c</text>
+<text x="361.2" y="427" textLength="33.6" lengthAdjust="spacingAndGlyphs" class="d">copy</text>
+<text x="411.6" y="427" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">e</text>
+<text x="428.4" y="427" textLength="33.6" lengthAdjust="spacingAndGlyphs" class="d">edit</text>
+<text x="478.8" y="427" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">s</text>
+<text x="495.6" y="427" textLength="33.6" lengthAdjust="spacingAndGlyphs" class="d">stop</text>
+<text x="546" y="427" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">+</text>
+<text x="562.8" y="427" textLength="25.2" lengthAdjust="spacingAndGlyphs" class="d">add</text>
+<text x="604.8" y="427" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">m</text>
+<text x="621.6" y="427" textLength="33.6" lengthAdjust="spacingAndGlyphs" class="d">more</text>
+<text x="672" y="427" textLength="25.2" lengthAdjust="spacingAndGlyphs" class="b">tab</text>
+<text x="705.6" y="427" textLength="67.2" lengthAdjust="spacingAndGlyphs" class="d">machines</text>
+<text x="789.6" y="427" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">q</text>
+<text x="806.4" y="427" textLength="42" lengthAdjust="spacingAndGlyphs" class="d">close</text>
+<text x="1050" y="427" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="445" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="445" textLength="798" lengthAdjust="spacingAndGlyphs" class="k4">└─────────────────────────────────────────────────────────────────────────────────────────────┘</text>
+<text x="210" y="463" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="210" y="481" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="210" y="499" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="210" y="517" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="201.6" y="535" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k0">«</text>
+<text x="210" y="535" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+</g>
+<text class="cap" x="16" y="626">ctrl+b f opens the Ports panel: every forward, on every machine</text>
+<text class="n" x="1125" y="626" text-anchor="end">3 / 8</text>
+<circle cx="1011" cy="620" r="3.5" fill="#89b4fa"/>
+</g>
+<g class="f a3" opacity="0">
+<g transform="translate(16,44)">
+<g shape-rendering="crispEdges">
+<rect x="218.4" y="0" width="67.2" height="18" class="k4"/>
+<rect x="285.6" y="0" width="823.2" height="18" class="k2"/>
+<rect x="260.4" y="90" width="798" height="18" class="k2"/>
+<rect x="260.4" y="108" width="8.4" height="18" class="k2"/>
+<rect x="268.8" y="108" width="75.6" height="18" class="k8"/>
+<rect x="1041.6" y="108" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="126" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="126" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="144" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="144" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="162" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="162" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="180" width="8.4" height="18" class="k2"/>
+<rect x="268.8" y="180" width="33.6" height="18" class="k8"/>
+<rect x="302.4" y="180" width="16.8" height="18" class="k5"/>
+<rect x="319.2" y="180" width="168" height="18" class="k8"/>
+<rect x="487.2" y="180" width="151.2" height="18" class="k9"/>
+<rect x="638.4" y="180" width="134.4" height="18" class="k8"/>
+<rect x="772.8" y="180" width="268.8" height="18" class="k10"/>
+<rect x="1041.6" y="180" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="198" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="198" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="216" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="216" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="234" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="234" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="252" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="252" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="270" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="270" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="288" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="288" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="306" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="306" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="324" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="324" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="342" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="342" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="360" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="360" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="378" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="378" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="396" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="396" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="414" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="414" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="432" width="798" height="18" class="k2"/>
+</g>
+<text x="8.4" y="13" textLength="67.2" lengthAdjust="spacingAndGlyphs" class="k0 b">machines</text>
+<text x="210" y="13" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="243.6" y="13" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k2">1</text>
+<text x="302.4" y="13" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k3">+</text>
+<text x="1058.4" y="13" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k3">⇄</text>
+<text x="1075.2" y="13" textLength="33.6" lengthAdjust="spacingAndGlyphs" class="k3">8000</text>
+<text x="210" y="31" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="218.4" y="31" textLength="134.4" lengthAdjust="spacingAndGlyphs" class="k5 b">dev@61f23506d7b7</text>
+<text x="352.8" y="31" textLength="8.4" lengthAdjust="spacingAndGlyphs">:</text>
+<text x="361.2" y="31" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4 b">~</text>
+<text x="369.6" y="31" textLength="134.4" lengthAdjust="spacingAndGlyphs">$ python3 app.py</text>
+<text x="8.4" y="49" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">▾</text>
+<text x="25.2" y="49" textLength="42" lengthAdjust="spacingAndGlyphs" class="b">Local</text>
+<text x="210" y="49" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="235.2" y="49" textLength="310.8" lengthAdjust="spacingAndGlyphs">App running at http://localhost:8000/</text>
+<text x="25.2" y="67" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k0">·</text>
+<text x="42" y="67" textLength="109.2" lengthAdjust="spacingAndGlyphs" class="k6">herdr-autofwd</text>
+<text x="210" y="67" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="8.4" y="85" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">▾</text>
+<text x="25.2" y="85" textLength="84" lengthAdjust="spacingAndGlyphs" class="b">dev-server</text>
+<text x="201.6" y="85" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k5">●</text>
+<text x="210" y="85" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="25.2" y="103" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k0">·</text>
+<text x="42" y="103" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">~</text>
+<text x="210" y="103" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="103" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">┌</text>
+<text x="268.8" y="103" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">⇄</text>
+<text x="285.6" y="103" textLength="772.8" lengthAdjust="spacingAndGlyphs" class="k4">Ports──────────────────────────────────────────────────────────────────────────────────────┐</text>
+<text x="8.4" y="121" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">▾</text>
+<text x="25.2" y="121" textLength="58.8" lengthAdjust="spacingAndGlyphs" class="b">gpu-box</text>
+<text x="201.6" y="121" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k5">●</text>
+<text x="210" y="121" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="121" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="277.2" y="121" textLength="58.8" lengthAdjust="spacingAndGlyphs" class="k7 b">Ports 2</text>
+<text x="361.2" y="121" textLength="84" lengthAdjust="spacingAndGlyphs" class="d">Machines 2</text>
+<text x="991.2" y="121" textLength="50.4" lengthAdjust="spacingAndGlyphs" class="d">? help</text>
+<text x="1050" y="121" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="25.2" y="139" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k0">·</text>
+<text x="42" y="139" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k6">~</text>
+<text x="210" y="139" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="139" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="277.2" y="139" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k5">●</text>
+<text x="294" y="139" textLength="84" lengthAdjust="spacingAndGlyphs" class="b">dev-server</text>
+<text x="403.2" y="139" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k5">●</text>
+<text x="420" y="139" textLength="58.8" lengthAdjust="spacingAndGlyphs" class="b">gpu-box</text>
+<text x="1050" y="139" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="157" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="157" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="310.8" y="157" textLength="58.8" lengthAdjust="spacingAndGlyphs" class="d">MACHINE</text>
+<text x="411.6" y="157" textLength="50.4" lengthAdjust="spacingAndGlyphs" class="d">REMOTE</text>
+<text x="478.8" y="157" textLength="109.2" lengthAdjust="spacingAndGlyphs" class="d">LOCAL ADDRESS</text>
+<text x="630" y="157" textLength="58.8" lengthAdjust="spacingAndGlyphs" class="d">PROCESS</text>
+<text x="764.4" y="157" textLength="33.6" lengthAdjust="spacingAndGlyphs" class="d">NOTE</text>
+<text x="1050" y="157" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="175" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="175" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="302.4" y="175" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k5">●</text>
+<text x="319.2" y="175" textLength="84" lengthAdjust="spacingAndGlyphs">dev-server</text>
+<text x="420" y="175" textLength="33.6" lengthAdjust="spacingAndGlyphs" class="b">8000</text>
+<text x="487.2" y="175" textLength="117.6" lengthAdjust="spacingAndGlyphs" class="k9">localhost:8000</text>
+<text x="638.4" y="175" textLength="58.8" lengthAdjust="spacingAndGlyphs">python3</text>
+<text x="1050" y="175" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="193" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="193" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="277.2" y="193" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k7 b">›</text>
+<text x="302.4" y="193" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k7">●</text>
+<text x="319.2" y="193" textLength="58.8" lengthAdjust="spacingAndGlyphs" class="k7">gpu-box</text>
+<text x="420" y="193" textLength="33.6" lengthAdjust="spacingAndGlyphs" class="k7 b">8000</text>
+<text x="487.2" y="193" textLength="117.6" lengthAdjust="spacingAndGlyphs" class="k7">localhost:8001</text>
+<text x="638.4" y="193" textLength="58.8" lengthAdjust="spacingAndGlyphs" class="k7">python3</text>
+<text x="772.8" y="193" textLength="260.4" lengthAdjust="spacingAndGlyphs" class="k7">! localhost:8000 is used by the</text>
+<text x="1033.2" y="193" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k7">…</text>
+<text x="1050" y="193" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="211" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="211" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="302.4" y="211" textLength="126" lengthAdjust="spacingAndGlyphs" class="d">+ Add a forward</text>
+<text x="1050" y="211" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="229" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="229" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="1050" y="229" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="247" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="247" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="1050" y="247" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="8.4" y="265" textLength="25.2" lengthAdjust="spacingAndGlyphs" class="k0">new</text>
+<text x="42" y="265" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k0">·</text>
+<text x="58.8" y="265" textLength="84" lengthAdjust="spacingAndGlyphs" class="k0">dev-server</text>
+<text x="176.4" y="265" textLength="33.6" lengthAdjust="spacingAndGlyphs" class="k0">menu</text>
+<text x="210" y="265" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="265" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="1050" y="265" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="0" y="283" textLength="218.4" lengthAdjust="spacingAndGlyphs" class="k1">─────────────────────────│</text>
+<text x="260.4" y="283" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="1050" y="283" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="8.4" y="301" textLength="50.4" lengthAdjust="spacingAndGlyphs" class="k0 b">agents</text>
+<text x="151.2" y="301" textLength="58.8" lengthAdjust="spacingAndGlyphs" class="k0 b">grouped</text>
+<text x="210" y="301" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="301" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="1050" y="301" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="319" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="319" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="1050" y="319" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="337" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="337" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="1050" y="337" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="355" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="355" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="1050" y="355" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="373" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="373" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="1050" y="373" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="391" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="391" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="1050" y="391" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="409" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="409" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="277.2" y="409" textLength="638.4" lengthAdjust="spacingAndGlyphs" class="k10">! gpu-box 8000: localhost:8000 is used by the forward from dev-server (8000)</text>
+<text x="1050" y="409" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="427" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="427" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="277.2" y="427" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">↵</text>
+<text x="294" y="427" textLength="33.6" lengthAdjust="spacingAndGlyphs" class="d">open</text>
+<text x="344.4" y="427" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">c</text>
+<text x="361.2" y="427" textLength="33.6" lengthAdjust="spacingAndGlyphs" class="d">copy</text>
+<text x="411.6" y="427" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">e</text>
+<text x="428.4" y="427" textLength="33.6" lengthAdjust="spacingAndGlyphs" class="d">edit</text>
+<text x="478.8" y="427" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">s</text>
+<text x="495.6" y="427" textLength="33.6" lengthAdjust="spacingAndGlyphs" class="d">stop</text>
+<text x="546" y="427" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">+</text>
+<text x="562.8" y="427" textLength="25.2" lengthAdjust="spacingAndGlyphs" class="d">add</text>
+<text x="604.8" y="427" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">m</text>
+<text x="621.6" y="427" textLength="33.6" lengthAdjust="spacingAndGlyphs" class="d">more</text>
+<text x="672" y="427" textLength="25.2" lengthAdjust="spacingAndGlyphs" class="b">tab</text>
+<text x="705.6" y="427" textLength="67.2" lengthAdjust="spacingAndGlyphs" class="d">machines</text>
+<text x="789.6" y="427" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">q</text>
+<text x="806.4" y="427" textLength="42" lengthAdjust="spacingAndGlyphs" class="d">close</text>
+<text x="1050" y="427" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="445" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="445" textLength="798" lengthAdjust="spacingAndGlyphs" class="k4">└─────────────────────────────────────────────────────────────────────────────────────────────┘</text>
+<text x="210" y="463" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="210" y="481" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="210" y="499" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="210" y="517" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="201.6" y="535" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k0">«</text>
+<text x="210" y="535" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+</g>
+<text class="cap" x="16" y="626">gpu-box wants port 8000 too: it gets 8001, and the panel says why</text>
+<text class="n" x="1125" y="626" text-anchor="end">4 / 8</text>
+<circle cx="1023" cy="620" r="3.5" fill="#89b4fa"/>
+</g>
+<g class="f a4" opacity="0">
+<g transform="translate(16,44)">
+<g shape-rendering="crispEdges">
+<rect x="218.4" y="0" width="67.2" height="18" class="k4"/>
+<rect x="285.6" y="0" width="823.2" height="18" class="k2"/>
+<rect x="260.4" y="90" width="798" height="18" class="k2"/>
+<rect x="260.4" y="108" width="8.4" height="18" class="k2"/>
+<rect x="268.8" y="108" width="75.6" height="18" class="k8"/>
+<rect x="1041.6" y="108" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="126" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="126" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="144" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="144" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="162" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="162" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="180" width="8.4" height="18" class="k2"/>
+<rect x="268.8" y="180" width="33.6" height="18" class="k8"/>
+<rect x="302.4" y="180" width="16.8" height="18" class="k5"/>
+<rect x="319.2" y="180" width="33.6" height="18" class="k8"/>
+<rect x="957.6" y="180" width="84" height="18" class="k10"/>
+<rect x="1041.6" y="180" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="198" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="198" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="216" width="8.4" height="18" class="k2"/>
+<rect x="529.2" y="216" width="8.4" height="18" class="k8"/>
+<rect x="1041.6" y="216" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="234" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="234" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="252" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="252" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="270" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="270" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="288" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="288" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="306" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="306" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="324" width="8.4" height="18" class="k2"/>
+<rect x="865.2" y="324" width="67.2" height="18" class="k8"/>
+<rect x="1041.6" y="324" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="342" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="342" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="360" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="360" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="378" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="378" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="396" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="396" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="414" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="414" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="432" width="798" height="18" class="k2"/>
+</g>
+<text x="8.4" y="13" textLength="67.2" lengthAdjust="spacingAndGlyphs" class="k0 b">machines</text>
+<text x="210" y="13" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="243.6" y="13" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k2">1</text>
+<text x="302.4" y="13" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k3">+</text>
+<text x="1058.4" y="13" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k3">⇄</text>
+<text x="1075.2" y="13" textLength="33.6" lengthAdjust="spacingAndGlyphs" class="k3">8000</text>
+<text x="210" y="31" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="218.4" y="31" textLength="134.4" lengthAdjust="spacingAndGlyphs" class="k5 b">dev@61f23506d7b7</text>
+<text x="352.8" y="31" textLength="8.4" lengthAdjust="spacingAndGlyphs">:</text>
+<text x="361.2" y="31" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4 b">~</text>
+<text x="369.6" y="31" textLength="134.4" lengthAdjust="spacingAndGlyphs">$ python3 app.py</text>
+<text x="8.4" y="49" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">▾</text>
+<text x="25.2" y="49" textLength="42" lengthAdjust="spacingAndGlyphs" class="b">Local</text>
+<text x="210" y="49" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="235.2" y="49" textLength="310.8" lengthAdjust="spacingAndGlyphs">App running at http://localhost:8000/</text>
+<text x="25.2" y="67" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k0">·</text>
+<text x="42" y="67" textLength="109.2" lengthAdjust="spacingAndGlyphs" class="k6">herdr-autofwd</text>
+<text x="210" y="67" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="8.4" y="85" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">▾</text>
+<text x="25.2" y="85" textLength="84" lengthAdjust="spacingAndGlyphs" class="b">dev-server</text>
+<text x="201.6" y="85" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k5">●</text>
+<text x="210" y="85" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="25.2" y="103" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k0">·</text>
+<text x="42" y="103" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">~</text>
+<text x="210" y="103" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="103" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">┌</text>
+<text x="268.8" y="103" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">⇄</text>
+<text x="285.6" y="103" textLength="772.8" lengthAdjust="spacingAndGlyphs" class="k4">Ports──────────────────────────────────────────────────────────────────────────────────────┐</text>
+<text x="8.4" y="121" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">▾</text>
+<text x="25.2" y="121" textLength="58.8" lengthAdjust="spacingAndGlyphs" class="b">gpu-box</text>
+<text x="201.6" y="121" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k5">●</text>
+<text x="210" y="121" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="121" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="277.2" y="121" textLength="58.8" lengthAdjust="spacingAndGlyphs" class="k7 b">Ports 2</text>
+<text x="361.2" y="121" textLength="84" lengthAdjust="spacingAndGlyphs" class="d">Machines 2</text>
+<text x="991.2" y="121" textLength="50.4" lengthAdjust="spacingAndGlyphs" class="d">? help</text>
+<text x="1050" y="121" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="25.2" y="139" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k0">·</text>
+<text x="42" y="139" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k6">~</text>
+<text x="210" y="139" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="139" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="277.2" y="139" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k5">●</text>
+<text x="294" y="139" textLength="84" lengthAdjust="spacingAndGlyphs" class="b">dev-server</text>
+<text x="403.2" y="139" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k5">●</text>
+<text x="420" y="139" textLength="58.8" lengthAdjust="spacingAndGlyphs" class="b">gpu-box</text>
+<text x="1050" y="139" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="157" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="157" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="310.8" y="157" textLength="42" lengthAdjust="spacingAndGlyphs" class="d">MACHI</text>
+<text x="352.8" y="157" textLength="596.4" lengthAdjust="spacingAndGlyphs" class="b">┌ Edit forward ───────────────────────────────────────────────────────┐</text>
+<text x="1050" y="157" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="175" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="175" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="302.4" y="175" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k5">●</text>
+<text x="319.2" y="175" textLength="33.6" lengthAdjust="spacingAndGlyphs">dev-</text>
+<text x="352.8" y="175" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">│</text>
+<text x="949.2" y="175" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">│</text>
+<text x="1050" y="175" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="193" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="193" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="277.2" y="193" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k7 b">›</text>
+<text x="302.4" y="193" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k7">●</text>
+<text x="319.2" y="193" textLength="33.6" lengthAdjust="spacingAndGlyphs" class="k7">gpu-</text>
+<text x="352.8" y="193" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">│</text>
+<text x="378" y="193" textLength="92.4" lengthAdjust="spacingAndGlyphs">Remote host</text>
+<text x="495.6" y="193" textLength="75.6" lengthAdjust="spacingAndGlyphs">localhost</text>
+<text x="714" y="193" textLength="201.6" lengthAdjust="spacingAndGlyphs" class="d">as seen from the machine</text>
+<text x="949.2" y="193" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">│</text>
+<text x="957.6" y="193" textLength="75.6" lengthAdjust="spacingAndGlyphs" class="k7">ed by the</text>
+<text x="1033.2" y="193" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k7">…</text>
+<text x="1050" y="193" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="211" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="211" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="302.4" y="211" textLength="42" lengthAdjust="spacingAndGlyphs" class="d">+ Add</text>
+<text x="352.8" y="211" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">│</text>
+<text x="378" y="211" textLength="92.4" lengthAdjust="spacingAndGlyphs">Remote port</text>
+<text x="495.6" y="211" textLength="33.6" lengthAdjust="spacingAndGlyphs">8000</text>
+<text x="949.2" y="211" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">│</text>
+<text x="1050" y="211" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="229" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="229" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="352.8" y="229" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">│</text>
+<text x="378" y="229" textLength="84" lengthAdjust="spacingAndGlyphs" class="b">Local port</text>
+<text x="495.6" y="229" textLength="33.6" lengthAdjust="spacingAndGlyphs" class="u">8000</text>
+<text x="714" y="229" textLength="226.8" lengthAdjust="spacingAndGlyphs" class="d">empty: keep the current one</text>
+<text x="949.2" y="229" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">│</text>
+<text x="1050" y="229" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="247" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="247" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="352.8" y="247" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">│</text>
+<text x="378" y="247" textLength="504" lengthAdjust="spacingAndGlyphs" class="d">Detected: a new remote host or port stops it and adds yours.</text>
+<text x="949.2" y="247" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">│</text>
+<text x="1050" y="247" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="8.4" y="265" textLength="25.2" lengthAdjust="spacingAndGlyphs" class="k0">new</text>
+<text x="42" y="265" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k0">·</text>
+<text x="58.8" y="265" textLength="84" lengthAdjust="spacingAndGlyphs" class="k0">dev-server</text>
+<text x="176.4" y="265" textLength="33.6" lengthAdjust="spacingAndGlyphs" class="k0">menu</text>
+<text x="210" y="265" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="265" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="352.8" y="265" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">│</text>
+<text x="949.2" y="265" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">│</text>
+<text x="1050" y="265" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="0" y="283" textLength="218.4" lengthAdjust="spacingAndGlyphs" class="k1">─────────────────────────│</text>
+<text x="260.4" y="283" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="352.8" y="283" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">│</text>
+<text x="378" y="283" textLength="529.2" lengthAdjust="spacingAndGlyphs" class="k11">! localhost:8000 is already used by the forward from dev-server</text>
+<text x="949.2" y="283" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">│</text>
+<text x="1050" y="283" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="8.4" y="301" textLength="50.4" lengthAdjust="spacingAndGlyphs" class="k0 b">agents</text>
+<text x="151.2" y="301" textLength="58.8" lengthAdjust="spacingAndGlyphs" class="k0 b">grouped</text>
+<text x="210" y="301" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="301" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="352.8" y="301" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">│</text>
+<text x="378" y="301" textLength="268.8" lengthAdjust="spacingAndGlyphs" class="k11">(8000). Pick another local port.</text>
+<text x="949.2" y="301" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">│</text>
+<text x="1050" y="301" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="319" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="319" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="352.8" y="319" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">│</text>
+<text x="949.2" y="319" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">│</text>
+<text x="1050" y="319" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="337" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="337" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="352.8" y="337" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">│</text>
+<text x="764.4" y="337" textLength="84" lengthAdjust="spacingAndGlyphs" class="b">[ Cancel ]</text>
+<text x="865.2" y="337" textLength="67.2" lengthAdjust="spacingAndGlyphs" class="k7 b">[ Save ]</text>
+<text x="949.2" y="337" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">│</text>
+<text x="1050" y="337" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="355" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="355" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="352.8" y="355" textLength="604.8" lengthAdjust="spacingAndGlyphs" class="b">└──────────────────────────────────────────────────────────────────────┘</text>
+<text x="1050" y="355" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="373" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="373" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="1050" y="373" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="391" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="391" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="1050" y="391" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="409" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="409" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="277.2" y="409" textLength="638.4" lengthAdjust="spacingAndGlyphs" class="k10">! gpu-box 8000: localhost:8000 is used by the forward from dev-server (8000)</text>
+<text x="1050" y="409" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="427" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="427" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="277.2" y="427" textLength="25.2" lengthAdjust="spacingAndGlyphs" class="b">tab</text>
+<text x="310.8" y="427" textLength="84" lengthAdjust="spacingAndGlyphs" class="d">next field</text>
+<text x="411.6" y="427" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">↵</text>
+<text x="428.4" y="427" textLength="33.6" lengthAdjust="spacingAndGlyphs" class="d">save</text>
+<text x="478.8" y="427" textLength="25.2" lengthAdjust="spacingAndGlyphs" class="b">esc</text>
+<text x="512.4" y="427" textLength="50.4" lengthAdjust="spacingAndGlyphs" class="d">cancel</text>
+<text x="1050" y="427" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="445" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="445" textLength="798" lengthAdjust="spacingAndGlyphs" class="k4">└─────────────────────────────────────────────────────────────────────────────────────────────┘</text>
+<text x="210" y="463" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="210" y="481" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="210" y="499" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="210" y="517" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="201.6" y="535" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k0">«</text>
+<text x="210" y="535" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+</g>
+<text class="cap" x="16" y="626">Edit it (e): a taken port is refused with who has it. Nothing breaks</text>
+<text class="n" x="1125" y="626" text-anchor="end">5 / 8</text>
+<circle cx="1035" cy="620" r="3.5" fill="#89b4fa"/>
+</g>
+<g class="f a5" opacity="0">
+<g transform="translate(16,44)">
+<g shape-rendering="crispEdges">
+<rect x="218.4" y="0" width="67.2" height="18" class="k4"/>
+<rect x="285.6" y="0" width="823.2" height="18" class="k2"/>
+<rect x="260.4" y="90" width="798" height="18" class="k2"/>
+<rect x="260.4" y="108" width="8.4" height="18" class="k2"/>
+<rect x="268.8" y="108" width="75.6" height="18" class="k8"/>
+<rect x="1041.6" y="108" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="126" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="126" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="144" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="144" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="162" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="162" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="180" width="8.4" height="18" class="k2"/>
+<rect x="268.8" y="180" width="33.6" height="18" class="k8"/>
+<rect x="302.4" y="180" width="16.8" height="18" class="k5"/>
+<rect x="319.2" y="180" width="168" height="18" class="k8"/>
+<rect x="487.2" y="180" width="151.2" height="18" class="k9"/>
+<rect x="638.4" y="180" width="403.2" height="18" class="k8"/>
+<rect x="1041.6" y="180" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="198" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="198" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="216" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="216" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="234" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="234" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="252" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="252" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="270" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="270" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="288" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="288" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="306" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="306" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="324" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="324" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="342" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="342" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="360" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="360" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="378" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="378" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="396" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="396" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="414" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="414" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="432" width="798" height="18" class="k2"/>
+</g>
+<text x="8.4" y="13" textLength="67.2" lengthAdjust="spacingAndGlyphs" class="k0 b">machines</text>
+<text x="210" y="13" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="243.6" y="13" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k2">1</text>
+<text x="302.4" y="13" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k3">+</text>
+<text x="1058.4" y="13" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k3">⇄</text>
+<text x="1075.2" y="13" textLength="33.6" lengthAdjust="spacingAndGlyphs" class="k3">8000</text>
+<text x="210" y="31" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="218.4" y="31" textLength="134.4" lengthAdjust="spacingAndGlyphs" class="k5 b">dev@61f23506d7b7</text>
+<text x="352.8" y="31" textLength="8.4" lengthAdjust="spacingAndGlyphs">:</text>
+<text x="361.2" y="31" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4 b">~</text>
+<text x="369.6" y="31" textLength="134.4" lengthAdjust="spacingAndGlyphs">$ python3 app.py</text>
+<text x="8.4" y="49" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">▾</text>
+<text x="25.2" y="49" textLength="42" lengthAdjust="spacingAndGlyphs" class="b">Local</text>
+<text x="210" y="49" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="235.2" y="49" textLength="310.8" lengthAdjust="spacingAndGlyphs">App running at http://localhost:8000/</text>
+<text x="25.2" y="67" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k0">·</text>
+<text x="42" y="67" textLength="109.2" lengthAdjust="spacingAndGlyphs" class="k6">herdr-autofwd</text>
+<text x="210" y="67" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="8.4" y="85" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">▾</text>
+<text x="25.2" y="85" textLength="84" lengthAdjust="spacingAndGlyphs" class="b">dev-server</text>
+<text x="201.6" y="85" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k5">●</text>
+<text x="210" y="85" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="25.2" y="103" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k0">·</text>
+<text x="42" y="103" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">~</text>
+<text x="210" y="103" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="103" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">┌</text>
+<text x="268.8" y="103" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">⇄</text>
+<text x="285.6" y="103" textLength="772.8" lengthAdjust="spacingAndGlyphs" class="k4">Ports──────────────────────────────────────────────────────────────────────────────────────┐</text>
+<text x="8.4" y="121" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">▾</text>
+<text x="25.2" y="121" textLength="58.8" lengthAdjust="spacingAndGlyphs" class="b">gpu-box</text>
+<text x="201.6" y="121" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k5">●</text>
+<text x="210" y="121" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="121" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="277.2" y="121" textLength="58.8" lengthAdjust="spacingAndGlyphs" class="k7 b">Ports 2</text>
+<text x="361.2" y="121" textLength="84" lengthAdjust="spacingAndGlyphs" class="d">Machines 2</text>
+<text x="991.2" y="121" textLength="50.4" lengthAdjust="spacingAndGlyphs" class="d">? help</text>
+<text x="1050" y="121" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="25.2" y="139" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k0">·</text>
+<text x="42" y="139" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k6">~</text>
+<text x="210" y="139" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="139" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="277.2" y="139" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k5">●</text>
+<text x="294" y="139" textLength="84" lengthAdjust="spacingAndGlyphs" class="b">dev-server</text>
+<text x="403.2" y="139" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k5">●</text>
+<text x="420" y="139" textLength="58.8" lengthAdjust="spacingAndGlyphs" class="b">gpu-box</text>
+<text x="1050" y="139" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="157" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="157" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="310.8" y="157" textLength="58.8" lengthAdjust="spacingAndGlyphs" class="d">MACHINE</text>
+<text x="411.6" y="157" textLength="50.4" lengthAdjust="spacingAndGlyphs" class="d">REMOTE</text>
+<text x="478.8" y="157" textLength="109.2" lengthAdjust="spacingAndGlyphs" class="d">LOCAL ADDRESS</text>
+<text x="630" y="157" textLength="58.8" lengthAdjust="spacingAndGlyphs" class="d">PROCESS</text>
+<text x="764.4" y="157" textLength="33.6" lengthAdjust="spacingAndGlyphs" class="d">NOTE</text>
+<text x="1050" y="157" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="175" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="175" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="302.4" y="175" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k5">●</text>
+<text x="319.2" y="175" textLength="84" lengthAdjust="spacingAndGlyphs">dev-server</text>
+<text x="420" y="175" textLength="33.6" lengthAdjust="spacingAndGlyphs" class="b">8000</text>
+<text x="487.2" y="175" textLength="117.6" lengthAdjust="spacingAndGlyphs" class="k9">localhost:8000</text>
+<text x="638.4" y="175" textLength="58.8" lengthAdjust="spacingAndGlyphs">python3</text>
+<text x="1050" y="175" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="193" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="193" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="277.2" y="193" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k7 b">›</text>
+<text x="302.4" y="193" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k7">●</text>
+<text x="319.2" y="193" textLength="58.8" lengthAdjust="spacingAndGlyphs" class="k7">gpu-box</text>
+<text x="420" y="193" textLength="33.6" lengthAdjust="spacingAndGlyphs" class="k7 b">8000</text>
+<text x="487.2" y="193" textLength="117.6" lengthAdjust="spacingAndGlyphs" class="k7">localhost:8080</text>
+<text x="638.4" y="193" textLength="58.8" lengthAdjust="spacingAndGlyphs" class="k7">python3</text>
+<text x="1050" y="193" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="211" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="211" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="302.4" y="211" textLength="126" lengthAdjust="spacingAndGlyphs" class="d">+ Add a forward</text>
+<text x="1050" y="211" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="229" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="229" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="1050" y="229" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="247" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="247" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="1050" y="247" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="8.4" y="265" textLength="25.2" lengthAdjust="spacingAndGlyphs" class="k0">new</text>
+<text x="42" y="265" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k0">·</text>
+<text x="58.8" y="265" textLength="84" lengthAdjust="spacingAndGlyphs" class="k0">dev-server</text>
+<text x="176.4" y="265" textLength="33.6" lengthAdjust="spacingAndGlyphs" class="k0">menu</text>
+<text x="210" y="265" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="265" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="1050" y="265" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="0" y="283" textLength="218.4" lengthAdjust="spacingAndGlyphs" class="k1">─────────────────────────│</text>
+<text x="260.4" y="283" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="1050" y="283" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="8.4" y="301" textLength="50.4" lengthAdjust="spacingAndGlyphs" class="k0 b">agents</text>
+<text x="151.2" y="301" textLength="58.8" lengthAdjust="spacingAndGlyphs" class="k0 b">grouped</text>
+<text x="210" y="301" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="301" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="1050" y="301" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="319" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="319" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="1050" y="319" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="337" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="337" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="1050" y="337" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="355" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="355" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="1050" y="355" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="373" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="373" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="1050" y="373" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="391" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="391" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="1050" y="391" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="409" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="409" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="277.2" y="409" textLength="243.6" lengthAdjust="spacingAndGlyphs" class="k5">8000 is now on localhost:8080</text>
+<text x="1050" y="409" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="427" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="427" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="277.2" y="427" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">↵</text>
+<text x="294" y="427" textLength="33.6" lengthAdjust="spacingAndGlyphs" class="d">open</text>
+<text x="344.4" y="427" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">c</text>
+<text x="361.2" y="427" textLength="33.6" lengthAdjust="spacingAndGlyphs" class="d">copy</text>
+<text x="411.6" y="427" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">e</text>
+<text x="428.4" y="427" textLength="33.6" lengthAdjust="spacingAndGlyphs" class="d">edit</text>
+<text x="478.8" y="427" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">s</text>
+<text x="495.6" y="427" textLength="33.6" lengthAdjust="spacingAndGlyphs" class="d">stop</text>
+<text x="546" y="427" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">+</text>
+<text x="562.8" y="427" textLength="25.2" lengthAdjust="spacingAndGlyphs" class="d">add</text>
+<text x="604.8" y="427" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">m</text>
+<text x="621.6" y="427" textLength="33.6" lengthAdjust="spacingAndGlyphs" class="d">more</text>
+<text x="672" y="427" textLength="25.2" lengthAdjust="spacingAndGlyphs" class="b">tab</text>
+<text x="705.6" y="427" textLength="67.2" lengthAdjust="spacingAndGlyphs" class="d">machines</text>
+<text x="789.6" y="427" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">q</text>
+<text x="806.4" y="427" textLength="42" lengthAdjust="spacingAndGlyphs" class="d">close</text>
+<text x="1050" y="427" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="445" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="445" textLength="798" lengthAdjust="spacingAndGlyphs" class="k4">└─────────────────────────────────────────────────────────────────────────────────────────────┘</text>
+<text x="210" y="463" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="210" y="481" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="210" y="499" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="210" y="517" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="201.6" y="535" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k0">«</text>
+<text x="210" y="535" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+</g>
+<text class="cap" x="16" y="626">Pick a free one and it moves: localhost:8080</text>
+<text class="n" x="1125" y="626" text-anchor="end">6 / 8</text>
+<circle cx="1047" cy="620" r="3.5" fill="#89b4fa"/>
+</g>
+<g class="f a6" opacity="0">
+<g transform="translate(16,44)">
+<g shape-rendering="crispEdges">
+<rect x="218.4" y="0" width="67.2" height="18" class="k4"/>
+<rect x="285.6" y="0" width="823.2" height="18" class="k2"/>
+<rect x="260.4" y="90" width="798" height="18" class="k2"/>
+<rect x="260.4" y="108" width="8.4" height="18" class="k2"/>
+<rect x="268.8" y="108" width="75.6" height="18" class="k8"/>
+<rect x="1041.6" y="108" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="126" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="126" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="144" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="144" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="162" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="162" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="180" width="8.4" height="18" class="k2"/>
+<rect x="268.8" y="180" width="33.6" height="18" class="k8"/>
+<rect x="302.4" y="180" width="16.8" height="18" class="k5"/>
+<rect x="319.2" y="180" width="33.6" height="18" class="k8"/>
+<rect x="957.6" y="180" width="84" height="18" class="k8"/>
+<rect x="1041.6" y="180" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="198" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="198" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="216" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="216" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="234" width="8.4" height="18" class="k2"/>
+<rect x="529.2" y="234" width="8.4" height="18" class="k8"/>
+<rect x="1041.6" y="234" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="252" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="252" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="270" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="270" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="288" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="288" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="306" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="306" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="324" width="8.4" height="18" class="k2"/>
+<rect x="865.2" y="324" width="67.2" height="18" class="k8"/>
+<rect x="1041.6" y="324" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="342" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="342" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="360" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="360" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="378" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="378" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="396" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="396" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="414" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="414" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="432" width="798" height="18" class="k2"/>
+</g>
+<text x="8.4" y="13" textLength="67.2" lengthAdjust="spacingAndGlyphs" class="k0 b">machines</text>
+<text x="210" y="13" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="243.6" y="13" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k2">1</text>
+<text x="302.4" y="13" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k3">+</text>
+<text x="1058.4" y="13" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k3">⇄</text>
+<text x="1075.2" y="13" textLength="33.6" lengthAdjust="spacingAndGlyphs" class="k3">8000</text>
+<text x="210" y="31" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="218.4" y="31" textLength="134.4" lengthAdjust="spacingAndGlyphs" class="k5 b">dev@61f23506d7b7</text>
+<text x="352.8" y="31" textLength="8.4" lengthAdjust="spacingAndGlyphs">:</text>
+<text x="361.2" y="31" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4 b">~</text>
+<text x="369.6" y="31" textLength="134.4" lengthAdjust="spacingAndGlyphs">$ python3 app.py</text>
+<text x="8.4" y="49" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">▾</text>
+<text x="25.2" y="49" textLength="42" lengthAdjust="spacingAndGlyphs" class="b">Local</text>
+<text x="210" y="49" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="235.2" y="49" textLength="310.8" lengthAdjust="spacingAndGlyphs">App running at http://localhost:8000/</text>
+<text x="25.2" y="67" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k0">·</text>
+<text x="42" y="67" textLength="109.2" lengthAdjust="spacingAndGlyphs" class="k6">herdr-autofwd</text>
+<text x="210" y="67" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="8.4" y="85" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">▾</text>
+<text x="25.2" y="85" textLength="84" lengthAdjust="spacingAndGlyphs" class="b">dev-server</text>
+<text x="201.6" y="85" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k5">●</text>
+<text x="210" y="85" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="25.2" y="103" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k0">·</text>
+<text x="42" y="103" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">~</text>
+<text x="210" y="103" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="103" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">┌</text>
+<text x="268.8" y="103" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">⇄</text>
+<text x="285.6" y="103" textLength="772.8" lengthAdjust="spacingAndGlyphs" class="k4">Ports──────────────────────────────────────────────────────────────────────────────────────┐</text>
+<text x="8.4" y="121" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">▾</text>
+<text x="25.2" y="121" textLength="58.8" lengthAdjust="spacingAndGlyphs" class="b">gpu-box</text>
+<text x="201.6" y="121" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k5">●</text>
+<text x="210" y="121" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="121" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="277.2" y="121" textLength="58.8" lengthAdjust="spacingAndGlyphs" class="k7 b">Ports 2</text>
+<text x="361.2" y="121" textLength="84" lengthAdjust="spacingAndGlyphs" class="d">Machines 2</text>
+<text x="991.2" y="121" textLength="50.4" lengthAdjust="spacingAndGlyphs" class="d">? help</text>
+<text x="1050" y="121" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="25.2" y="139" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k0">·</text>
+<text x="42" y="139" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k6">~</text>
+<text x="210" y="139" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="139" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="277.2" y="139" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k5">●</text>
+<text x="294" y="139" textLength="84" lengthAdjust="spacingAndGlyphs" class="b">dev-server</text>
+<text x="403.2" y="139" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k5">●</text>
+<text x="420" y="139" textLength="58.8" lengthAdjust="spacingAndGlyphs" class="b">gpu-box</text>
+<text x="1050" y="139" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="157" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="157" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="310.8" y="157" textLength="58.8" lengthAdjust="spacingAndGlyphs" class="d">MACHINE</text>
+<text x="411.6" y="157" textLength="50.4" lengthAdjust="spacingAndGlyphs" class="d">REMOTE</text>
+<text x="478.8" y="157" textLength="109.2" lengthAdjust="spacingAndGlyphs" class="d">LOCAL ADDRESS</text>
+<text x="630" y="157" textLength="58.8" lengthAdjust="spacingAndGlyphs" class="d">PROCESS</text>
+<text x="764.4" y="157" textLength="33.6" lengthAdjust="spacingAndGlyphs" class="d">NOTE</text>
+<text x="1050" y="157" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="175" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="175" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="302.4" y="175" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k5">●</text>
+<text x="319.2" y="175" textLength="33.6" lengthAdjust="spacingAndGlyphs">dev-</text>
+<text x="352.8" y="175" textLength="596.4" lengthAdjust="spacingAndGlyphs" class="b">┌ Add a forward ──────────────────────────────────────────────────────┐</text>
+<text x="1050" y="175" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="193" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="193" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="277.2" y="193" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k7 b">›</text>
+<text x="302.4" y="193" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k7">●</text>
+<text x="319.2" y="193" textLength="33.6" lengthAdjust="spacingAndGlyphs" class="k7">gpu-</text>
+<text x="352.8" y="193" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">│</text>
+<text x="949.2" y="193" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">│</text>
+<text x="1050" y="193" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="211" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="211" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="302.4" y="211" textLength="42" lengthAdjust="spacingAndGlyphs" class="d">+ Add</text>
+<text x="352.8" y="211" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">│</text>
+<text x="378" y="211" textLength="58.8" lengthAdjust="spacingAndGlyphs">Machine</text>
+<text x="495.6" y="211" textLength="8.4" lengthAdjust="spacingAndGlyphs">◂</text>
+<text x="512.4" y="211" textLength="84" lengthAdjust="spacingAndGlyphs">dev-server</text>
+<text x="604.8" y="211" textLength="8.4" lengthAdjust="spacingAndGlyphs">▸</text>
+<text x="714" y="211" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="d">←</text>
+<text x="722.4" y="211" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="d">/</text>
+<text x="730.8" y="211" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="d">→</text>
+<text x="747.6" y="211" textLength="151.2" lengthAdjust="spacingAndGlyphs" class="d">or click to switch</text>
+<text x="949.2" y="211" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">│</text>
+<text x="1050" y="211" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="229" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="229" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="352.8" y="229" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">│</text>
+<text x="378" y="229" textLength="92.4" lengthAdjust="spacingAndGlyphs">Remote host</text>
+<text x="495.6" y="229" textLength="75.6" lengthAdjust="spacingAndGlyphs">localhost</text>
+<text x="714" y="229" textLength="201.6" lengthAdjust="spacingAndGlyphs" class="d">as seen from the machine</text>
+<text x="949.2" y="229" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">│</text>
+<text x="1050" y="229" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="247" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="247" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="352.8" y="247" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">│</text>
+<text x="378" y="247" textLength="92.4" lengthAdjust="spacingAndGlyphs" class="b">Remote port</text>
+<text x="495.6" y="247" textLength="33.6" lengthAdjust="spacingAndGlyphs" class="u">9000</text>
+<text x="949.2" y="247" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">│</text>
+<text x="1050" y="247" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="8.4" y="265" textLength="25.2" lengthAdjust="spacingAndGlyphs" class="k0">new</text>
+<text x="42" y="265" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k0">·</text>
+<text x="58.8" y="265" textLength="84" lengthAdjust="spacingAndGlyphs" class="k0">dev-server</text>
+<text x="176.4" y="265" textLength="33.6" lengthAdjust="spacingAndGlyphs" class="k0">menu</text>
+<text x="210" y="265" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="265" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="352.8" y="265" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">│</text>
+<text x="378" y="265" textLength="84" lengthAdjust="spacingAndGlyphs">Local port</text>
+<text x="714" y="265" textLength="210" lengthAdjust="spacingAndGlyphs" class="d">empty: same, or next free</text>
+<text x="949.2" y="265" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">│</text>
+<text x="1050" y="265" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="0" y="283" textLength="218.4" lengthAdjust="spacingAndGlyphs" class="k1">─────────────────────────│</text>
+<text x="260.4" y="283" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="352.8" y="283" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">│</text>
+<text x="949.2" y="283" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">│</text>
+<text x="1050" y="283" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="8.4" y="301" textLength="50.4" lengthAdjust="spacingAndGlyphs" class="k0 b">agents</text>
+<text x="151.2" y="301" textLength="58.8" lengthAdjust="spacingAndGlyphs" class="k0 b">grouped</text>
+<text x="210" y="301" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="301" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="352.8" y="301" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">│</text>
+<text x="949.2" y="301" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">│</text>
+<text x="1050" y="301" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="319" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="319" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="352.8" y="319" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">│</text>
+<text x="949.2" y="319" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">│</text>
+<text x="1050" y="319" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="337" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="337" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="352.8" y="337" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">│</text>
+<text x="764.4" y="337" textLength="84" lengthAdjust="spacingAndGlyphs" class="b">[ Cancel ]</text>
+<text x="865.2" y="337" textLength="67.2" lengthAdjust="spacingAndGlyphs" class="k7 b">[ Save ]</text>
+<text x="949.2" y="337" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">│</text>
+<text x="1050" y="337" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="355" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="355" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="352.8" y="355" textLength="604.8" lengthAdjust="spacingAndGlyphs" class="b">└──────────────────────────────────────────────────────────────────────┘</text>
+<text x="1050" y="355" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="373" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="373" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="1050" y="373" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="391" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="391" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="1050" y="391" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="409" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="409" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="1050" y="409" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="427" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="427" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="277.2" y="427" textLength="25.2" lengthAdjust="spacingAndGlyphs" class="b">tab</text>
+<text x="310.8" y="427" textLength="84" lengthAdjust="spacingAndGlyphs" class="d">next field</text>
+<text x="411.6" y="427" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">↵</text>
+<text x="428.4" y="427" textLength="33.6" lengthAdjust="spacingAndGlyphs" class="d">save</text>
+<text x="478.8" y="427" textLength="25.2" lengthAdjust="spacingAndGlyphs" class="b">esc</text>
+<text x="512.4" y="427" textLength="50.4" lengthAdjust="spacingAndGlyphs" class="d">cancel</text>
+<text x="1050" y="427" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="445" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="445" textLength="798" lengthAdjust="spacingAndGlyphs" class="k4">└─────────────────────────────────────────────────────────────────────────────────────────────┘</text>
+<text x="210" y="463" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="210" y="481" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="210" y="499" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="210" y="517" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="201.6" y="535" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k0">«</text>
+<text x="210" y="535" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+</g>
+<text class="cap" x="16" y="626">+ adds a forward: any port, or any host:port the server can reach</text>
+<text class="n" x="1125" y="626" text-anchor="end">7 / 8</text>
+<circle cx="1059" cy="620" r="3.5" fill="#89b4fa"/>
+</g>
+<g class="f a7" opacity="0">
+<g transform="translate(16,44)">
+<g shape-rendering="crispEdges">
+<rect x="218.4" y="0" width="67.2" height="18" class="k4"/>
+<rect x="285.6" y="0" width="823.2" height="18" class="k2"/>
+<rect x="260.4" y="90" width="798" height="18" class="k2"/>
+<rect x="260.4" y="108" width="8.4" height="18" class="k2"/>
+<rect x="268.8" y="108" width="75.6" height="18" class="k8"/>
+<rect x="1041.6" y="108" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="126" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="126" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="144" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="144" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="162" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="162" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="180" width="8.4" height="18" class="k2"/>
+<rect x="268.8" y="180" width="33.6" height="18" class="k8"/>
+<rect x="302.4" y="180" width="16.8" height="18" class="k5"/>
+<rect x="319.2" y="180" width="168" height="18" class="k8"/>
+<rect x="487.2" y="180" width="151.2" height="18" class="k9"/>
+<rect x="638.4" y="180" width="134.4" height="18" class="k12"/>
+<rect x="772.8" y="180" width="268.8" height="18" class="k8"/>
+<rect x="1041.6" y="180" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="198" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="198" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="216" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="216" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="234" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="234" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="252" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="252" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="270" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="270" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="288" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="288" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="306" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="306" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="324" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="324" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="342" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="342" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="360" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="360" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="378" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="378" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="396" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="396" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="414" width="8.4" height="18" class="k2"/>
+<rect x="1041.6" y="414" width="16.8" height="18" class="k2"/>
+<rect x="260.4" y="432" width="798" height="18" class="k2"/>
+</g>
+<text x="8.4" y="13" textLength="67.2" lengthAdjust="spacingAndGlyphs" class="k0 b">machines</text>
+<text x="210" y="13" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="243.6" y="13" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k2">1</text>
+<text x="302.4" y="13" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k3">+</text>
+<text x="1058.4" y="13" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k3">⇄</text>
+<text x="1075.2" y="13" textLength="33.6" lengthAdjust="spacingAndGlyphs" class="k3">8000</text>
+<text x="210" y="31" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="218.4" y="31" textLength="134.4" lengthAdjust="spacingAndGlyphs" class="k5 b">dev@61f23506d7b7</text>
+<text x="352.8" y="31" textLength="8.4" lengthAdjust="spacingAndGlyphs">:</text>
+<text x="361.2" y="31" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4 b">~</text>
+<text x="369.6" y="31" textLength="134.4" lengthAdjust="spacingAndGlyphs">$ python3 app.py</text>
+<text x="8.4" y="49" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">▾</text>
+<text x="25.2" y="49" textLength="42" lengthAdjust="spacingAndGlyphs" class="b">Local</text>
+<text x="210" y="49" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="235.2" y="49" textLength="310.8" lengthAdjust="spacingAndGlyphs">App running at http://localhost:8000/</text>
+<text x="25.2" y="67" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k0">·</text>
+<text x="42" y="67" textLength="109.2" lengthAdjust="spacingAndGlyphs" class="k6">herdr-autofwd</text>
+<text x="210" y="67" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="8.4" y="85" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">▾</text>
+<text x="25.2" y="85" textLength="84" lengthAdjust="spacingAndGlyphs" class="b">dev-server</text>
+<text x="201.6" y="85" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k5">●</text>
+<text x="210" y="85" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="25.2" y="103" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k0">·</text>
+<text x="42" y="103" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">~</text>
+<text x="210" y="103" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="103" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">┌</text>
+<text x="268.8" y="103" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">⇄</text>
+<text x="285.6" y="103" textLength="772.8" lengthAdjust="spacingAndGlyphs" class="k4">Ports──────────────────────────────────────────────────────────────────────────────────────┐</text>
+<text x="8.4" y="121" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">▾</text>
+<text x="25.2" y="121" textLength="58.8" lengthAdjust="spacingAndGlyphs" class="b">gpu-box</text>
+<text x="201.6" y="121" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k5">●</text>
+<text x="210" y="121" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="121" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="277.2" y="121" textLength="58.8" lengthAdjust="spacingAndGlyphs" class="k7 b">Ports 3</text>
+<text x="361.2" y="121" textLength="84" lengthAdjust="spacingAndGlyphs" class="d">Machines 2</text>
+<text x="991.2" y="121" textLength="50.4" lengthAdjust="spacingAndGlyphs" class="d">? help</text>
+<text x="1050" y="121" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="25.2" y="139" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k0">·</text>
+<text x="42" y="139" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k6">~</text>
+<text x="210" y="139" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="139" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="277.2" y="139" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k5">●</text>
+<text x="294" y="139" textLength="84" lengthAdjust="spacingAndGlyphs" class="b">dev-server</text>
+<text x="403.2" y="139" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k5">●</text>
+<text x="420" y="139" textLength="58.8" lengthAdjust="spacingAndGlyphs" class="b">gpu-box</text>
+<text x="1050" y="139" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="157" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="157" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="310.8" y="157" textLength="58.8" lengthAdjust="spacingAndGlyphs" class="d">MACHINE</text>
+<text x="411.6" y="157" textLength="50.4" lengthAdjust="spacingAndGlyphs" class="d">REMOTE</text>
+<text x="478.8" y="157" textLength="109.2" lengthAdjust="spacingAndGlyphs" class="d">LOCAL ADDRESS</text>
+<text x="630" y="157" textLength="58.8" lengthAdjust="spacingAndGlyphs" class="d">PROCESS</text>
+<text x="764.4" y="157" textLength="33.6" lengthAdjust="spacingAndGlyphs" class="d">NOTE</text>
+<text x="1050" y="157" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="175" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="175" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="302.4" y="175" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k5">●</text>
+<text x="319.2" y="175" textLength="84" lengthAdjust="spacingAndGlyphs">dev-server</text>
+<text x="420" y="175" textLength="33.6" lengthAdjust="spacingAndGlyphs" class="b">8000</text>
+<text x="487.2" y="175" textLength="117.6" lengthAdjust="spacingAndGlyphs" class="k9">localhost:8000</text>
+<text x="638.4" y="175" textLength="58.8" lengthAdjust="spacingAndGlyphs">python3</text>
+<text x="1050" y="175" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="193" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="193" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="277.2" y="193" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k7 b">›</text>
+<text x="302.4" y="193" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k7">●</text>
+<text x="319.2" y="193" textLength="84" lengthAdjust="spacingAndGlyphs" class="k7">dev-server</text>
+<text x="420" y="193" textLength="33.6" lengthAdjust="spacingAndGlyphs" class="k7 b">9000</text>
+<text x="487.2" y="193" textLength="117.6" lengthAdjust="spacingAndGlyphs" class="k7">localhost:9000</text>
+<text x="638.4" y="193" textLength="42" lengthAdjust="spacingAndGlyphs" class="k7">added</text>
+<text x="1050" y="193" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="211" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="211" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="302.4" y="211" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k5">●</text>
+<text x="319.2" y="211" textLength="58.8" lengthAdjust="spacingAndGlyphs">gpu-box</text>
+<text x="420" y="211" textLength="33.6" lengthAdjust="spacingAndGlyphs" class="b">8000</text>
+<text x="487.2" y="211" textLength="117.6" lengthAdjust="spacingAndGlyphs" class="k9">localhost:8080</text>
+<text x="638.4" y="211" textLength="58.8" lengthAdjust="spacingAndGlyphs">python3</text>
+<text x="1050" y="211" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="229" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="229" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="302.4" y="229" textLength="126" lengthAdjust="spacingAndGlyphs" class="d">+ Add a forward</text>
+<text x="1050" y="229" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="247" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="247" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="1050" y="247" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="8.4" y="265" textLength="25.2" lengthAdjust="spacingAndGlyphs" class="k0">new</text>
+<text x="42" y="265" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k0">·</text>
+<text x="58.8" y="265" textLength="84" lengthAdjust="spacingAndGlyphs" class="k0">dev-server</text>
+<text x="176.4" y="265" textLength="33.6" lengthAdjust="spacingAndGlyphs" class="k0">menu</text>
+<text x="210" y="265" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="265" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="1050" y="265" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="0" y="283" textLength="218.4" lengthAdjust="spacingAndGlyphs" class="k1">─────────────────────────│</text>
+<text x="260.4" y="283" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="1050" y="283" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="8.4" y="301" textLength="50.4" lengthAdjust="spacingAndGlyphs" class="k0 b">agents</text>
+<text x="151.2" y="301" textLength="58.8" lengthAdjust="spacingAndGlyphs" class="k0 b">grouped</text>
+<text x="210" y="301" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="301" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="1050" y="301" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="319" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="319" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="1050" y="319" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="337" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="337" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="1050" y="337" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="355" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="355" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="1050" y="355" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="373" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="373" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="1050" y="373" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="391" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="391" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="1050" y="391" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="409" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="409" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="277.2" y="409" textLength="260.4" lengthAdjust="spacingAndGlyphs" class="k5">Forwarding 9000 from dev-server</text>
+<text x="1050" y="409" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="427" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="427" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="277.2" y="427" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">↵</text>
+<text x="294" y="427" textLength="33.6" lengthAdjust="spacingAndGlyphs" class="d">open</text>
+<text x="344.4" y="427" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">c</text>
+<text x="361.2" y="427" textLength="33.6" lengthAdjust="spacingAndGlyphs" class="d">copy</text>
+<text x="411.6" y="427" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">e</text>
+<text x="428.4" y="427" textLength="33.6" lengthAdjust="spacingAndGlyphs" class="d">edit</text>
+<text x="478.8" y="427" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">s</text>
+<text x="495.6" y="427" textLength="50.4" lengthAdjust="spacingAndGlyphs" class="d">remove</text>
+<text x="562.8" y="427" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">+</text>
+<text x="579.6" y="427" textLength="25.2" lengthAdjust="spacingAndGlyphs" class="d">add</text>
+<text x="621.6" y="427" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">m</text>
+<text x="638.4" y="427" textLength="33.6" lengthAdjust="spacingAndGlyphs" class="d">more</text>
+<text x="688.8" y="427" textLength="25.2" lengthAdjust="spacingAndGlyphs" class="b">tab</text>
+<text x="722.4" y="427" textLength="67.2" lengthAdjust="spacingAndGlyphs" class="d">machines</text>
+<text x="806.4" y="427" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="b">q</text>
+<text x="823.2" y="427" textLength="42" lengthAdjust="spacingAndGlyphs" class="d">close</text>
+<text x="1050" y="427" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k4">│</text>
+<text x="210" y="445" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="260.4" y="445" textLength="798" lengthAdjust="spacingAndGlyphs" class="k4">└─────────────────────────────────────────────────────────────────────────────────────────────┘</text>
+<text x="210" y="463" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="210" y="481" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="210" y="499" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="210" y="517" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+<text x="201.6" y="535" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k0">«</text>
+<text x="210" y="535" textLength="8.4" lengthAdjust="spacingAndGlyphs" class="k1">│</text>
+</g>
+<text class="cap" x="16" y="626">Done: the server's port 9000 is on localhost:9000</text>
+<text class="n" x="1125" y="626" text-anchor="end">8 / 8</text>
+<circle cx="1071" cy="620" r="3.5" fill="#89b4fa"/>
+</g>
+</svg>

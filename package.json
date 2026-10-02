@@ -1,0 +1,14 @@
+{
+  "name": "herdr-autofwd",
+  "version": "0.1.0",
+  "description": "Herdr plugin: automatic port forwarding for saved SSH machines.",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node --test",
+    "demo": "node demo/try.js"
+  }
+}

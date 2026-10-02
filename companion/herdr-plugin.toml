@@ -1,0 +1,22 @@
+# Server-side companion, copied to each SSH machine by the Ports panel's herdr integration (S). herdr
+# runs keybindings on the machine you're viewing, so this lets prefix+f open the Ports panel there too.
+# The panel itself runs on your computer; ui.sh only relays keys and screen.
+id = "autofwd"
+name = "autofwd (server side)"
+version = "0.1.0"
+min_herdr_version = "0.9.0"
+description = "Opens the autofwd Ports panel while you view this machine. Managed by autofwd on your computer."
+platforms = ["linux"]
+
+[[actions]]
+id = "ports"
+title = "Ports panel"
+command = ["sh", "-c", "exec \"$HERDR_BIN_PATH\" plugin pane open --plugin autofwd --entrypoint ports-ui"]
+
+[[panes]]
+id = "ports-ui"
+title = "⇄ Ports"
+placement = "popup"
+width = "90%"
+height = "70%"
+command = ["sh", "ui.sh"]

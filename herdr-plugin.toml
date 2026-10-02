@@ -1,0 +1,29 @@
+id = "autofwd"
+name = "autofwd"
+version = "0.1.0"
+min_herdr_version = "0.9.0"
+description = "Automatic port forwarding for saved SSH machines: any port a remote pane starts listening on opens on this computer's localhost, same port, like VS Code Remote-SSH."
+platforms = ["linux", "macos"]
+
+# Starts the background forwarder (one per user) if it isn't running, then exits.
+[[startup]]
+command = ["node", "src/cli.js", "start"]
+
+# Opens the Ports panel as a floating window.
+[[actions]]
+id = "ports"
+title = "Ports panel"
+command = ["node", "src/cli.js", "ports"]
+
+[[actions]]
+id = "restart"
+title = "Restart port forwarding"
+command = ["node", "src/cli.js", "restart"]
+
+[[panes]]
+id = "ports-ui"
+title = "⇄ Ports"
+placement = "popup"
+width = "90%"
+height = "70%"
+command = ["node", "src/cli.js", "ports-ui"]
