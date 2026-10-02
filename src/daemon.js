@@ -12,6 +12,7 @@ import { Forwarder } from "./forwarder.js";
 import * as Integration from "./integration.js";
 import { Panel } from "./panel.js";
 import * as Prefs from "./prefs.js";
+import { indicator } from "./text.js";
 
 const run = promisify(execFile);
 const MACHINE_POLL_MS = 3000;
@@ -166,14 +167,6 @@ async function whoHolds(port) {
   const ss = await run("ss", ["-Hltnp", `sport = :${port}`]).then((r) => r.stdout, () => "");
   if ((m = /users:\(\("([^"]+)",pid=(\d+)/.exec(ss))) return `${m[1]} (pid ${m[2]}) on this computer`;
   return "another program on this computer";
-}
-
-/** "⇄ 3000 5173→5174" for the tab row. @param {import("./forwarder.js").PortRow[]} rows */
-function indicator(rows) {
-  const parts = rows.filter((r) => r.local !== null).map((r) => (r.remote === String(r.local) ? r.remote : `${r.remote}→${r.local}`));
-  if (!parts.length) return "⇄ no ports";
-  const text = `⇄ ${parts.join(" ")}`;
-  return text.length <= 40 ? text : `⇄ ${parts.length} ports`;
 }
 
 /**

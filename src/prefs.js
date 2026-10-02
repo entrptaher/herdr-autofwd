@@ -3,37 +3,18 @@
 import fs from "node:fs";
 import path from "node:path";
 import { STATE_DIR, log } from "./common.js";
+import { destHost, destPort, isPort, parseDest, showDest } from "./text.js";
 
 const FILE = path.join(STATE_DIR, "prefs.json");
 
 /**
- * A forward destination ("dest") is "host:port" as seen from the machine: "localhost:3000", "db.internal:5432",
- * "[fd00::1]:80". Ports the machine listens on itself are always "localhost:PORT".
+ * Forward destinations ("dests", "host:port" as seen from the machine) are described in text.js.
  *
  * @typedef {{auto: boolean, stopped: number[], manual: string[], local: Record<string, number>, companion: boolean}} MachinePrefs
  *   auto: forward detected ports automatically; stopped: detected ports you stopped; manual: dests you
  *   added; local: dest -> the local port you picked for it; companion: the integration is installed there.
  * @typedef {{notify: boolean, shortcut: boolean, machines: Record<string, MachinePrefs>}} Prefs
  */
-
-const isPort = (/** @type {unknown} */ n) => Number.isInteger(n) && /** @type {number} */ (n) >= 1 && /** @type {number} */ (n) <= 65535;
-
-/**
- * "3000" -> "localhost:3000"; "db:5432" and "[fd00::1]:80" stay; anything else is null. The host check
- * also keeps dests safe inside an ssh -L spec.
- * @param {string} text @returns {string | null}
- */
-export function parseDest(text) {
-  const m = /^(?:(\[[0-9A-Fa-f:.]+\]|[A-Za-z0-9](?:[A-Za-z0-9.-]{0,251}[A-Za-z0-9])?):)?(\d{1,5})$/.exec(String(text).trim());
-  return m && isPort(Number(m[2])) ? `${m[1] ?? "localhost"}:${Number(m[2])}` : null;
-}
-
-/** @param {string} dest */
-export const destPort = (dest) => Number(dest.slice(dest.lastIndexOf(":") + 1));
-/** @param {string} dest */
-export const destHost = (dest) => dest.slice(0, dest.lastIndexOf(":"));
-/** How a dest is shown: just the port when it's the machine's own. @param {string} dest */
-export const showDest = (dest) => (destHost(dest) === "localhost" ? String(destPort(dest)) : dest);
 
 /** @returns {Prefs} */
 export function load() {
@@ -74,4 +55,4 @@ export function machine(prefs, id) {
   return (prefs.machines[id] ??= { auto: true, stopped: [], manual: [], local: {}, companion: false });
 }
 
-export { isPort };
+export { destHost, destPort, isPort, parseDest, showDest };

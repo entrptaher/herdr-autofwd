@@ -9,7 +9,7 @@ import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
 import { HERDR } from "./common.js";
-import { printable } from "./forwarder.js";
+import { printable } from "./text.js";
 
 export const KEY = "prefix+f";
 export const REMOTE_STATUS = "$HOME/.cache/herdr-autofwd/status";

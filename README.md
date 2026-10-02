@@ -141,4 +141,5 @@ against real SSH servers in Docker.
 | `src/watch.sh` | The port watcher sent to each server |
 | `companion/` | The panel's window on a server |
 | `demo/` | `npm run demo`, and the Docker SSH servers |
+| `demo/web/` | The panel in a browser, and the video tour (`#tour`): `node demo/web/build.js` builds one HTML page |
 | `docs/demo/` | The animation above (`render.mjs` turns the captured frames into `demo.svg`) |

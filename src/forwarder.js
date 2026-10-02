@@ -10,7 +10,7 @@ import os from "node:os";
 import path from "node:path";
 import readline from "node:readline";
 import { log } from "./common.js";
-import { destHost, destPort, isPort, parseDest, showDest } from "./prefs.js";
+import { destHost, destPort, isPort, parseDest, printable, showDest } from "./text.js";
 
 const WATCH_SCRIPT = fs.readFileSync(new URL("./watch.sh", import.meta.url), "utf8");
 const SPAN = 20; // local ports tried per forward: the wanted one first, then the next free ones
@@ -423,15 +423,6 @@ function range(port) {
   const out = [];
   for (let local = port; local < port + SPAN && local <= 65535; local++) out.push(local);
   return out;
-}
-
-/**
- * Text from the machine (process names, SSH errors and banners) is drawn in your terminal, so it must
- * not carry escape sequences: a process could otherwise name itself to rewrite the screen or clipboard.
- * @param {string} text
- */
-export function printable(text) {
-  return text.replace(/[\x00-\x1f\x7f-\x9f]/g, "");
 }
 
 /** @param {string} text */

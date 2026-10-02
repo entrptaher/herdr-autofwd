@@ -1,0 +1,362 @@
+<title>autofwd for herdr</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;700&display=swap">
+<style>
+/* xterm.css */
+</style>
+<style>
+/* Layout: one stage. A herdr window on the left (a server shell, with the real Ports panel floating over
+   it), the tunnels it creates and the scenarios on the right, and one caption line under both.
+   Deliberately dark only: it is a terminal, in herdr's own palette. */
+:root {
+  --ground: #0c0c15;
+  --base: #1e1e2e;
+  --mantle: #181825;
+  --crust: #11111b;
+  --line: #2c2d42;
+  --text: #cdd6f4;
+  --sub: #a6adc8;
+  --muted: #7a7f99;
+  --blue: #89b4fa;
+  --live: #a6e3a1;
+  --moved: #f9e2af;
+  --err: #f38ba8;
+  --display: "Bricolage Grotesque", "IBM Plex Sans", system-ui, sans-serif;
+  --body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --r: 10px;
+  color-scheme: dark;
+}
+html, body { background: var(--ground); color: var(--text); }
+body {
+  font: 15px/1.5 var(--body);
+  padding-inline: clamp(16px, 3vw, 56px);
+  padding-block: 0 28px;
+  background:
+    radial-gradient(1200px 520px at 30% -10%, rgb(137 180 250 / 0.10), transparent 70%),
+    radial-gradient(900px 500px at 95% 110%, rgb(166 227 161 / 0.06), transparent 70%),
+    var(--ground);
+  min-height: 100%;
+}
+.wrap { max-width: 1760px; margin-inline: auto; display: grid; grid-template-columns: minmax(0, 1fr); gap: 18px; }
+button { font: inherit; color: inherit; cursor: pointer; }
+[hidden] { display: none !important; }
+:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+/* ---- header ---- */
+.top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px; padding-top: 22px; }
+.brand { display: flex; align-items: baseline; gap: 10px; font: 700 22px/1 var(--display); letter-spacing: -0.01em; }
+.brand .glyph { color: var(--blue); font-family: var(--mono); font-weight: 700; }
+.brand .for { font: 500 14px/1 var(--body); color: var(--muted); letter-spacing: 0.02em; }
+.install { display: flex; align-items: center; min-width: 0; max-width: 100%; border: 1px solid var(--line); border-radius: 8px; background: var(--crust); }
+.install code { font: 13.5px/1 var(--mono); padding: 10px 12px; color: var(--text); overflow-x: auto; white-space: nowrap; min-width: 0; }
+.install code::before { content: "$ "; color: var(--muted); }
+.install button { border: 0; border-left: 1px solid var(--line); background: transparent; padding: 10px 14px; font-size: 13px; color: var(--sub); border-radius: 0 8px 8px 0; }
+.install button:hover { color: var(--text); background: var(--mantle); }
+
+.hero { display: grid; gap: 8px; }
+.hero h1 { margin: 0; font: 700 clamp(30px, 3.2vw, 50px)/1.04 var(--display); letter-spacing: -0.025em; text-wrap: balance; }
+.hero h1 em { font-style: normal; color: var(--live); font-family: var(--mono); font-weight: 700; font-size: 0.84em; letter-spacing: -0.04em; }
+.hero p { margin: 0; color: var(--sub); max-width: 112ch; font-size: 16.5px; }
+
+/* ---- stage ---- */
+.stage { display: grid; grid-template-columns: minmax(0, 1fr) minmax(320px, 470px); gap: 18px; position: relative; }
+.col { display: grid; gap: 18px; align-content: start; min-width: 0; }
+
+/* the herdr window */
+.herdr { position: relative; border: 1px solid #34354a; border-radius: 12px; background: var(--base); overflow: hidden; box-shadow: 0 30px 80px -30px rgb(0 0 0 / 0.8), 0 0 0 1px rgb(0 0 0 / 0.4); display: grid; grid-template-rows: auto minmax(0, 1fr); grid-template-columns: minmax(0, 1fr); min-height: clamp(460px, calc(100vh - 390px), 680px); min-width: 0; }
+.titlebar { display: flex; align-items: center; gap: 8px; padding: 10px 14px; background: var(--mantle); border-bottom: 1px solid #2a2b3d; font: 12.5px/1 var(--mono); color: var(--muted); }
+.titlebar i { width: 12px; height: 12px; border-radius: 50%; background: #f38ba8; }
+.titlebar i:nth-child(2) { background: #f9e2af; } .titlebar i:nth-child(3) { background: #a6e3a1; }
+.titlebar span { margin-left: 10px; }
+.win { display: grid; grid-template-columns: 196px minmax(0, 1fr); min-height: 0; min-width: 0; }
+.side { padding: 14px 10px 14px 16px; font: 13px/1.45 var(--mono); color: var(--sub); border-right: 1px solid #26273a; display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.side .h { color: var(--muted); font-weight: 700; margin-bottom: 8px; }
+.side .m { display: flex; justify-content: space-between; align-items: center; width: 100%; text-align: left; background: none; border: 0; padding: 2px 6px; margin-left: -6px; border-radius: 4px; font: 700 13px/1.45 var(--mono); color: var(--text); }
+.side button.m:hover { background: #262738; }
+.side .m.on { background: #313244; }
+.side .m .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--live); box-shadow: 0 0 8px rgb(166 227 161 / 0.6); }
+.side .ws { padding-left: 14px; color: var(--muted); margin-bottom: 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.side .grow { flex: 1; }
+.side .foot { color: var(--muted); display: flex; justify-content: space-between; font-weight: 700; }
+.main { position: relative; display: grid; grid-template-rows: auto 1fr; min-height: 0; min-width: 0; }
+.tabrow { display: flex; align-items: center; gap: 14px; padding: 8px 14px 4px 12px; font: 13px/1 var(--mono); color: var(--muted); }
+.tabrow .tab { background: var(--blue); color: var(--crust); padding: 3px 26px; font-weight: 700; }
+.tabrow .ind { margin-left: auto; color: var(--blue); white-space: nowrap; transition: color 0.3s; }
+.tabrow .ind.flash { color: var(--live); }
+.pane { min-height: 0; min-width: 0; overflow: hidden; padding: 2px 0 6px 10px; }
+.pane .xterm { height: 100%; }
+.pane .xterm-viewport, .popup .xterm-viewport { background: var(--base) !important; }
+
+/* herdr's floating popup with the real panel */
+.popup { position: absolute; left: 4%; right: 4%; top: 13%; bottom: 7%; border: 1px solid var(--blue); background: var(--base); padding: 6px 4px 2px 8px; box-shadow: 0 20px 60px -20px rgb(0 0 0 / 0.9); }
+.popup .title { position: absolute; top: -0.8em; left: 6px; padding: 0 4px; background: var(--base); color: var(--blue); font: 13px/1.5 var(--mono); }
+.popup .term { height: 100%; }
+.popup .term .xterm { height: 100%; }
+
+/* keys pressed by the tour */
+.keys { position: absolute; left: 50%; bottom: 18px; transform: translateX(-50%); display: flex; gap: 6px; pointer-events: none; z-index: 6; }
+.lens, .camera { display: contents; }
+.caption .progress { display: none; }
+.keys kbd { font: 700 15px/1 var(--mono); color: var(--crust); background: var(--text); border-radius: 6px; padding: 8px 11px; box-shadow: 0 3px 0 #7f849c, 0 10px 30px rgb(0 0 0 / 0.6); animation: key 1.1s ease forwards; }
+@keyframes key { 0% { opacity: 0; transform: translateY(8px) scale(0.9); } 12% { opacity: 1; transform: none; } 75% { opacity: 1; } 100% { opacity: 0; } }
+
+/* a pretend browser on your laptop */
+.browser { position: absolute; right: 18px; bottom: 18px; width: min(440px, 78%); border-radius: 10px; overflow: hidden; background: #f4f4f7; color: #1f2333; box-shadow: 0 30px 70px -10px rgb(0 0 0 / 0.75), 0 0 0 1px rgb(255 255 255 / 0.08); z-index: 5; animation: rise 0.35s cubic-bezier(.2,.8,.2,1); }
+@keyframes rise { from { opacity: 0; transform: translateY(14px) scale(0.98); } }
+.browser .bar { display: flex; align-items: center; gap: 8px; padding: 9px 10px; background: #e3e4ea; }
+.browser .bar i { width: 10px; height: 10px; border-radius: 50%; background: #c9cad3; }
+.browser .url { flex: 1; min-width: 0; background: #fff; border-radius: 6px; padding: 5px 10px; font: 12.5px/1.2 var(--mono); color: #3a3f55; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.browser .x { border: 0; background: none; font-size: 16px; line-height: 1; color: #6b7088; padding: 2px 6px; border-radius: 4px; }
+.browser .x:hover { background: #d4d5de; }
+.browser .body { min-height: 190px; display: grid; }
+.browser .via { padding: 8px 12px; font: 12px/1.3 var(--mono); background: #1f2333; color: var(--live); }
+.site { padding: 22px; display: grid; gap: 10px; align-content: center; justify-items: center; text-align: center; }
+.site.vite { background: #242424; color: #e8e8e8; font-family: system-ui, sans-serif; }
+.site.vite h3 { margin: 0; font-size: 26px; }
+.site.vite .count { background: #1a1a1a; border: 1px solid #3a3a3a; border-radius: 8px; padding: 8px 16px; color: #e8e8e8; }
+.site.vite .count:hover { border-color: #646cff; }
+.site.vite p { margin: 0; color: #888; font-size: 13px; }
+.site.vite code { color: #c8c8ff; }
+.site.list { justify-items: start; text-align: left; font-family: "Times New Roman", Times, serif; align-content: start; }
+.site.list h3 { margin: 0; font-size: 22px; }
+.site.list ul { margin: 0; padding-left: 22px; } .site.list a { color: #0000ee; }
+.site.jupyter { justify-items: stretch; text-align: left; align-content: start; font-family: system-ui, sans-serif; gap: 0; padding: 0; }
+.site.jupyter .hd { padding: 10px 14px; font-weight: 700; color: #e46e2e; border-bottom: 1px solid #ddd; }
+.site.jupyter .f { padding: 7px 14px; border-bottom: 1px solid #eee; font-size: 13.5px; display: flex; justify-content: space-between; }
+.site.jupyter .f span { color: #888; }
+.site.json { justify-items: start; text-align: left; font: 13px/1.6 var(--mono); background: #fff; }
+.site.done { background: #fff; }
+.site.done .ok { width: 44px; height: 44px; border-radius: 50%; background: #2f9e57; color: #fff; display: grid; place-items: center; font-size: 24px; }
+.site.done h3 { margin: 0; font-size: 19px; }
+.site.done p { margin: 0; color: #555; font-size: 13.5px; }
+.site.down { background: #fff; justify-items: start; text-align: left; }
+.site.down h3 { margin: 0; font-size: 19px; } .site.down p { margin: 0; color: #555; font-size: 13.5px; }
+
+/* cards in the right column */
+.card { border: 1px solid var(--line); border-radius: var(--r); background: rgb(24 24 37 / 0.85); min-width: 0; }
+.card > header { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 14px 16px 0; }
+.card h2 { margin: 0; font: 700 17px/1.2 var(--display); letter-spacing: -0.01em; }
+.card header small { color: var(--muted); font-size: 12.5px; }
+
+/* the tunnel map */
+.map .body { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) 64px minmax(0, 1fr); gap: 0; padding: 14px 16px 16px; min-height: 220px; }
+.map svg { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; overflow: visible; }
+.map .lap, .map .srv { display: grid; gap: 8px; align-content: start; min-width: 0; }
+.map .colh { font: 600 11px/1 var(--body); text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); margin-bottom: 2px; }
+.map .box { border: 1px solid var(--line); border-radius: 8px; padding: 8px; display: grid; gap: 6px; background: rgb(17 17 27 / 0.6); }
+.map .box .mh { display: flex; justify-content: space-between; align-items: center; font: 700 12.5px/1 var(--mono); color: var(--text); }
+.map .box .mh span { font: 500 11px/1 var(--body); color: var(--live); white-space: nowrap; }
+.map .box .mh span em { font-style: normal; }
+.chip { border: 1px solid var(--line); border-radius: 6px; padding: 6px 8px; background: var(--mantle); display: grid; gap: 2px; min-width: 0; position: relative; z-index: 1; }
+.chip b { font: 700 13px/1.15 var(--mono); color: var(--text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.chip small { font: 11.5px/1.25 var(--body); color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.chip.live { border-color: rgb(166 227 161 / 0.45); }
+.chip.live b { color: var(--live); }
+.chip.moved { border-color: rgb(249 226 175 / 0.55); }
+.chip.moved b { color: var(--moved); }
+.chip.moved small { color: var(--moved); opacity: 0.85; }
+.chip.off { opacity: 0.55; border-style: dashed; }
+.chip.bad { border-color: rgb(243 139 168 / 0.6); } .chip.bad b { color: var(--err); }
+.chip.yours { background: transparent; border-style: dashed; }
+.chip.yours b { color: var(--sub); }
+.chip.new { animation: pop 0.5s cubic-bezier(.2,.9,.3,1.3), glow 1.8s ease-out; }
+@keyframes pop { from { transform: scale(0.85); opacity: 0; } }
+@keyframes glow { 0% { box-shadow: 0 0 0 0 rgb(166 227 161 / 0.7); } 100% { box-shadow: 0 0 0 14px rgb(166 227 161 / 0); } }
+.empty { font-size: 12.5px; color: var(--muted); padding: 6px 2px; }
+.wire { fill: none; stroke-width: 2; }
+.wire.base { opacity: 0.22; }
+.wire.flow { stroke-dasharray: 3 9; animation: flow 0.9s linear infinite; }
+.wire.new { animation: flow 0.9s linear infinite, draw 0.7s ease-out; }
+@keyframes flow { to { stroke-dashoffset: -12; } }
+@keyframes draw { from { opacity: 0; } }
+
+/* scenarios */
+.try ul { list-style: none; margin: 0; padding: 10px 10px 4px; display: grid; gap: 2px; }
+.try li button { width: 100%; text-align: left; background: none; border: 1px solid transparent; border-radius: 8px; padding: 6px 10px; display: grid; gap: 0; }
+.try li button:hover { background: var(--mantle); border-color: var(--line); }
+.try li button b { font-weight: 600; font-size: 14.5px; }
+.try li button span { color: var(--muted); font-size: 12.5px; }
+.try li button.on { background: rgb(137 180 250 / 0.10); border-color: rgb(137 180 250 / 0.45); }
+.try .foot { display: flex; gap: 8px; padding: 6px 16px 16px; }
+.btn { border: 1px solid var(--line); background: var(--mantle); border-radius: 8px; padding: 8px 14px; font-weight: 600; font-size: 14px; }
+.btn:hover { border-color: #45475a; }
+.btn.primary { background: var(--blue); color: var(--crust); border-color: var(--blue); }
+.btn.primary:hover { background: #a5c6fb; }
+
+/* caption and command chips */
+.caption { grid-column: 1 / -1; display: flex; align-items: center; gap: 18px; min-height: 64px; padding: 12px 20px; border-radius: var(--r); background: var(--crust); border: 1px solid var(--line); }
+.caption .step { font: 700 13px/1 var(--mono); color: var(--blue); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.caption .text { font: 500 clamp(17px, 1.55vw, 25px)/1.3 var(--display); letter-spacing: -0.01em; text-wrap: balance; }
+.caption .text code { font: 700 0.9em var(--mono); color: var(--live); }
+.caption .text.fade { animation: cap 0.45s ease; }
+@keyframes cap { from { opacity: 0; transform: translateY(6px); } }
+.cmds { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; color: var(--muted); font-size: 13.5px; }
+.cmds button { font: 12.5px/1 var(--mono); border: 1px solid var(--line); background: var(--crust); border-radius: 6px; padding: 7px 9px; color: var(--sub); }
+.cmds button:hover { color: var(--text); border-color: #45475a; }
+.cmds kbd { font: 700 12.5px/1 var(--mono); }
+
+/* end card */
+.outro { position: absolute; inset: 0; z-index: 10; display: grid; place-items: center; background: rgb(12 12 21 / 0.86); backdrop-filter: blur(6px); border-radius: 12px; animation: rise 0.5s ease; }
+.outro > div { display: grid; gap: 18px; justify-items: center; text-align: center; padding: 24px; }
+.outro .mark { font: 700 clamp(48px, 6vw, 96px)/1 var(--display); letter-spacing: -0.03em; }
+.outro .mark span { color: var(--blue); font-family: var(--mono); }
+.outro p { margin: 0; color: var(--sub); font-size: clamp(16px, 1.5vw, 22px); }
+.outro .install code { font-size: clamp(14px, 1.3vw, 19px); }
+.outro .repo { font: 14px var(--mono); color: var(--muted); }
+
+.note { color: var(--muted); font-size: 12.5px; }
+
+/* #tour: the video. The page is the frame (720x720 square, or 1280x720), recorded at 1.5x. Captions sit
+   at the top, where phone players don't cover them; a camera zooms the stage onto what's happening. */
+.tour { --sub-h: 128px; padding: 0; }
+.tour .top, .tour .hero, .tour .cmds, .tour .note, .tour .try { display: none; }
+.tour .wrap { display: block; max-width: none; }
+.tour .stage { position: fixed; inset: 0; display: block; overflow: hidden; }
+/* subtitles: a band of their own under the picture, each word lighting up as it's spoken */
+.tour .caption { position: absolute; left: 0; right: 0; bottom: 0; height: var(--sub-h); min-height: 0; z-index: 11; border: 0; border-top: 1px solid var(--line); border-radius: 0; background: var(--crust); padding: 0 30px; flex-direction: row; align-items: center; justify-content: center; }
+.tour .caption .step { display: none; }
+.tour .caption .text { font: 700 32px/1.2 var(--display); letter-spacing: -0.015em; text-align: center; }
+.caption .text.words { animation: none; }
+.caption .text.words span { opacity: 0.28; transition: opacity 0.12s ease; }
+.caption .text.words span.on { opacity: 1; }
+.tour .caption .progress { display: block; position: absolute; left: 0; top: -1px; height: 3px; width: 0; background: linear-gradient(90deg, var(--blue), var(--live)); transition: width 0.6s ease; }
+.tour .lens { display: block; position: absolute; top: 0; left: 0; right: 0; bottom: var(--sub-h); overflow: hidden; }
+.tour .camera { display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(0, 1fr) auto; gap: 12px; height: 100%; padding: 14px 18px 14px; transform-origin: 0 0; transition: transform 0.95s cubic-bezier(.65, 0, .35, 1); }
+.tour .herdr { min-height: 0; height: auto; }
+.tour .side { display: none; }
+.tour .win { grid-template-columns: minmax(0, 1fr); }
+.tour .popup { left: 2%; right: 2%; top: 9%; bottom: 4%; }
+.tour .map { height: 234px; overflow: hidden; }
+.tour .map .body { padding: 12px 14px 12px; }
+.tour .map .box { padding: 6px; gap: 4px; }
+.tour .map .body { min-height: 0; }
+.tour .chip b { font-size: 17px; }
+.tour .chip small { font-size: 13.5px; }
+.tour .map > header { display: none; }
+.tour .map .colh { font-size: 12.5px; }
+.tour .map .box .mh { font-size: 15px; }
+.tour .map .box .mh span { font-size: 13px; }
+.tour .titlebar { padding-block: 7px; }
+.tour .keys { bottom: calc(var(--sub-h) + 16px); }
+.tour .outro .btn { display: none; }
+.tour .outro { cursor: pointer; }
+.tour .keys kbd { font-size: 22px; padding: 11px 15px; border-radius: 8px; }
+.tour .browser { width: min(460px, 86%); }
+@media (min-aspect-ratio: 3/2) {
+  .tour { --sub-h: 104px; }
+  .tour .camera { grid-template-columns: minmax(0, 1fr) 340px; grid-template-rows: minmax(0, 1fr); }
+  .tour .col { grid-template-rows: minmax(0, 1fr); }
+  .tour .map { height: auto; }
+  .tour .map > header { display: flex; }
+  .tour .side { display: flex; }
+  .tour .win { grid-template-columns: 150px minmax(0, 1fr); }
+  .tour .map .body { grid-template-columns: minmax(0, 1fr) 34px minmax(0, 1fr); }
+  .tour .map .mh em { display: none; }
+  .tour .caption .text { font-size: 30px; }
+}
+
+/* the title card the video opens with */
+.intro { position: absolute; inset: 0; z-index: 12; display: grid; place-items: center; background: radial-gradient(700px 400px at 50% 40%, rgb(137 180 250 / 0.14), transparent 70%), var(--ground); transition: opacity 0.6s ease; }
+.intro.gone { opacity: 0; }
+.intro > div { display: grid; gap: 16px; justify-items: center; text-align: center; padding: 24px; }
+.intro .mark { font: 700 84px/1 var(--display); letter-spacing: -0.03em; display: flex; gap: 18px; align-items: center; }
+.intro .mark span { color: var(--blue); font-family: var(--mono); display: inline-block; animation: swap 1.4s cubic-bezier(.65, 0, .35, 1) 0.2s both; }
+@keyframes swap { from { transform: rotateY(180deg) scale(0.6); opacity: 0; } }
+.intro p { margin: 0; font: 500 26px/1.3 var(--display); color: var(--text); max-width: 22ch; text-wrap: balance; animation: cap 0.6s ease 0.5s both; }
+.intro small { color: var(--muted); font: 15px var(--mono); animation: cap 0.6s ease 0.8s both; }
+
+@media (max-width: 1100px) {
+  .stage { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 720px) {
+  .win { grid-template-columns: minmax(0, 1fr); }
+  .side { display: none; }
+  .herdr { min-height: 0; height: 520px; }
+  .popup { left: 2%; right: 2%; top: 8%; bottom: 4%; }
+  .caption { flex-direction: column; align-items: flex-start; gap: 6px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <div class="brand"><span class="glyph">⇄</span> autofwd <span class="for">a plugin for herdr</span></div>
+    <div class="install"><code id="install">herdr plugin install entrptaher/herdr-autofwd</code><button id="copy" type="button">Copy</button></div>
+  </header>
+
+  <section class="hero">
+    <h1>Start anything on your server. It's on your <em>localhost</em>.</h1>
+    <p>Automatic port forwarding for herdr's SSH machines, like VS Code Remote-SSH, with nothing to configure. When two things want the same port, one moves and the panel says who has it.</p>
+  </section>
+
+  <main class="stage" id="stage">
+    <div class="lens" id="lens"><div class="camera" id="camera">
+    <div class="herdr" id="herdr">
+      <div class="titlebar" aria-hidden="true"><i></i><i></i><i></i><span id="wintitle">herdr · dev-server</span></div>
+      <div class="win">
+        <aside class="side" aria-label="Machines">
+          <div class="h">machines</div>
+          <div class="m">▾ Local</div>
+          <div class="ws">· herdr-autofwd</div>
+          <button class="m" type="button" data-machine="dev-server">▾ dev-server <span class="dot" title="connected"></span></button>
+          <div class="ws">· ~/app</div>
+          <button class="m" type="button" data-machine="gpu-box">▾ gpu-box <span class="dot" title="connected"></span></button>
+          <div class="ws">· ~/app</div>
+          <div class="grow"></div>
+          <div class="foot"><span>agents</span><span>grouped</span></div>
+        </aside>
+        <section class="main">
+          <div class="tabrow" aria-hidden="true"><span class="tab">1</span><span>+</span><span class="ind" id="indicator">⇄ no ports</span></div>
+          <div class="pane" id="shell" aria-label="Server shell"></div>
+          <div class="popup" id="popup" hidden><div class="title">⇄ Ports</div><div class="term" id="panel" aria-label="Ports panel"></div></div>
+          <div class="browser" id="browser" hidden>
+            <div class="bar"><i></i><i></i><i></i><div class="url" id="url"></div><button class="x" id="close-browser" type="button" aria-label="Close the browser">×</button></div>
+            <div class="body" id="site"></div>
+            <div class="via" id="via"></div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div class="col">
+      <section class="card map" aria-label="Tunnels">
+        <header><h2>Tunnels</h2><small>one SSH connection per machine</small></header>
+        <div class="body" id="map"></div>
+      </section>
+      <section class="card try">
+        <header><h2>Try a scenario</h2><small>or type in the shell</small></header>
+        <ul id="scenarios">
+          <li><button type="button" data-s="dev"><b>Start a dev server</b><span>npm run dev on dev-server</span></button></li>
+          <li><button type="button" data-s="clash"><b>Same port on a second server</b><span>gpu-box runs it too, and moves to the next free port</span></button></li>
+          <li><button type="button" data-s="mine"><b>Your laptop already uses the port</b><span>Jupyter on gpu-box finds 8888 taken on your laptop</span></button></li>
+          <li><button type="button" data-s="edit"><b>Edit a forward</b><span>change its local port in the Ports panel</span></button></li>
+          <li><button type="button" data-s="login"><b>A CLI login callback</b><span>wrangler login's OAuth redirect to localhost:8976</span></button></li>
+        </ul>
+        <div class="foot"><button class="btn primary" id="play" type="button">▶ Play the tour</button><button class="btn" id="reset" type="button">Reset</button></div>
+      </section>
+    </div>
+
+    </div></div>
+
+    <div class="caption" aria-live="polite"><span class="step" id="step"></span><span class="text" id="caption"></span><i class="progress" id="progress"></i></div>
+    <div class="keys" id="keys" aria-hidden="true"></div>
+  </main>
+
+  <div class="cmds" id="cmds">
+    <span>Type these in the shell:</span>
+    <button type="button">npm run dev</button>
+    <button type="button">python3 -m http.server 9000</button>
+    <button type="button">jupyter lab</button>
+    <button type="button">npx wrangler login</button>
+    <span>· open the panel with</span><button type="button" id="open-panel"><kbd>ctrl+b f</kbd></button>
+  </div>
+  <p class="note">The servers are simulated in your browser. The Ports panel is the plugin's real code, running in xterm.js.</p>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@xterm/xterm@5.5.0/lib/xterm.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@xterm/addon-fit@0.10.0/lib/addon-fit.min.js"></script>
+<!-- page.js -->

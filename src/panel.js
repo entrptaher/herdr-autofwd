@@ -2,9 +2,7 @@
 // The Ports panel: a VS Code-style list of forwarded ports you can act on with keys or the mouse, with one
 // form to add or edit a forward. It runs inside the daemon and draws into a plain terminal byte stream,
 // so herdr's floating windows on this computer and on SSH machines only relay keys and screen.
-import { spawn } from "node:child_process";
-import { printable } from "./forwarder.js";
-import { destHost, destPort, isPort, parseDest } from "./prefs.js";
+import { destHost, destPort, isPort, parseDest, printable } from "./text.js";
 
 const RESET = "\x1b[0m";
 const S = { bold: "\x1b[1m", dim: "\x1b[2m", inv: "\x1b[7m", ul: "\x1b[4m", red: "\x1b[31m", green: "\x1b[32m", yellow: "\x1b[33m", magenta: "\x1b[35m", cyan: "\x1b[36m" };
@@ -31,13 +29,14 @@ const TOKEN = /\x1b\[<(\d+);(\d+);(\d+)([Mm])|\x1b\[8;(\d+);(\d+)t|\x1b\[(\d*)(?
 export class Panel {
   /**
    * @param {Api} api
-   * @param {{input: NodeJS.ReadableStream, output: NodeJS.WritableStream, rows: number, cols: number, focus?: string, onClose?: () => void, open?: (url: string) => void}} io
-   *   focus: the machine the panel was opened from, selected first; open: how to open a URL (default: the
-   *   system browser)
+   * @param {{input: NodeJS.ReadableStream, output: NodeJS.WritableStream, rows: number, cols: number, focus?: string, onClose?: () => void, open?: (url: string) => void, copy?: (text: string) => void}} io
+   *   focus: the machine the panel was opened from, selected first; open, copy: how to open or copy a URL
+   *   (default: this computer's browser and clipboard, see desktop.js)
    */
   constructor(api, io) {
     this.api = api;
     this.openUrl = io.open;
+    this.copyText = io.copy;
     this.out = io.output;
     this.rows = io.rows;
     this.cols = io.cols;
@@ -335,8 +334,7 @@ export class Panel {
     if (row.local === null) return this.say(`${row.remote} isn't forwarded right now`, "err");
     const url = `http://localhost:${row.local}`;
     if (this.openUrl) return this.openUrl(url);
-    const opener = process.platform === "darwin" ? "open" : "xdg-open";
-    spawn(opener, [url], { detached: true, stdio: "ignore" }).on("error", () => this.say(`Couldn't run ${opener}`, "err")).unref();
+    import("./desktop.js").then((d) => d.openUrl(url, (message) => this.say(message, "err")));
     this.say(`Opened ${url}`, "ok");
   }
 
@@ -344,7 +342,8 @@ export class Panel {
   copy(row) {
     if (row.local === null) return this.say(`${row.remote} isn't forwarded right now`, "err");
     const url = `http://localhost:${row.local}`;
-    copyText(url, () => this.write(`\x1b]52;c;${Buffer.from(url).toString("base64")}\x07`)); // OSC 52 fallback
+    if (this.copyText) this.copyText(url);
+    else import("./desktop.js").then((d) => d.copyText(url, () => this.write(`\x1b]52;c;${btoa(url)}\x07`))); // OSC 52 fallback
     this.say(`Copied ${url}`, "ok");
   }
 
@@ -809,21 +808,4 @@ function charKey(c) {
   if (c === "\x7f" || c === "\b") return "backspace";
   if (c === "\x03") return "ctrl-c";
   return c;
-}
-
-/** Copy to this computer's clipboard; calls fallback when no clipboard tool exists. @param {string} text @param {() => void} fallback */
-function copyText(text, fallback) {
-  const tools = process.platform === "darwin" ? [["pbcopy"]] : [["wl-copy"], ["xclip", "-selection", "clipboard"], ["xsel", "--clipboard", "--input"]];
-  const attempt = (/** @type {number} */ i) => {
-    if (i >= tools.length) return fallback();
-    const [cmd, ...args] = tools[i];
-    const p = spawn(cmd, args, { stdio: ["pipe", "ignore", "ignore"] });
-    let failed = false; // spawn errors can be followed by close; move on once
-    const next = () => !failed && ((failed = true), attempt(i + 1));
-    p.on("error", next);
-    p.on("close", (code) => code !== 0 && next());
-    p.stdin.on("error", () => {});
-    p.stdin.end(text);
-  };
-  attempt(0);
 }
