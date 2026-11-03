@@ -31,8 +31,9 @@ forwards, and see what a conflict looks like. Press `q` to quit.
 
 ## Quick start
 
-Needs herdr 0.9+, Node.js 18+, OpenSSH, and Linux servers you reach with key-based SSH (ssh-agent, or a
-key without a passphrase).
+Needs herdr 0.9+, Node.js 18+, OpenSSH, and Linux or macOS servers you reach with key-based SSH
+(ssh-agent, or a key without a passphrase). On a Mac, turn on Remote Login in System Settings → General →
+Sharing.
 
 ```bash
 herdr plugin install entrptaher/herdr-autofwd   # or, from a clone: herdr plugin link .
@@ -92,6 +93,13 @@ connection, watches the listening ports the way VS Code does (reading `/proc/net
 removes forwards on that same connection. It skips other users' ports, so system services aren't
 forwarded; add those with `+` if you want them.
 
+On a Mac the watcher uses `ps` and `lsof`, and it is pickier, because Macs run apps that listen too
+(AirPlay takes 5000 and 7000). It forwards your programs that were started from a terminal: a herdr
+pane, an SSH session, or anything a program there starts in the background, like a dev server an
+agent launches. Panes kept alive by herdr's live handoff still count. Apps, launchd agents and
+`brew services` don't, and neither does a server that fully detaches from its terminal; add those with
+`+`.
+
 <details>
 <summary><b>What <code>S</code> changes</b> (the shortcut and the indicator)</summary>
 
@@ -122,6 +130,8 @@ herdr and starts forwarding. `demo/demo.sh down` removes everything. See
 
 - **A machine shows `retrying: Permission denied`:** `ssh -o BatchMode=yes <host> true` has to work, so
   run `ssh-add` first.
+- **A Mac server keeps showing `retrying`:** it may be asleep. Keep it awake while you use it, for
+  example with `caffeinate -s` there or the energy settings.
 - **Nothing happens at all:** herdr starts the plugin with `node`, so Node must be on the `PATH` herdr
   started with. `herdr plugin log list --plugin autofwd` shows why.
 - **Status from a terminal:** `node src/cli.js status`. Logs and saved choices are in

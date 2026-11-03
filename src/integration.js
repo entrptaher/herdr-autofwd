@@ -103,8 +103,11 @@ H=
 for p in /proc/[0-9]*; do # prefer the herdr that is running here: its version owns the plugin registry
   [ -O "$p" ] && [ "$(cat "$p/comm" 2>/dev/null)" = herdr ] && H=$(readlink "$p/exe") && break
 done
-[ -x "$H" ] || H=$(command -v herdr 2>/dev/null) || :
-for c in "$HOME/.local/bin/herdr" /home/linuxbrew/.linuxbrew/bin/herdr "$HOME/.nix-profile/bin/herdr"; do
+[ -x "$H" ] || for p in $(pgrep -U "$(id -u)" -x herdr 2>/dev/null); do # no /proc (macOS): ps names the binary
+  H=$(ps -o comm= -p "$p" 2>/dev/null) && [ -x "$H" ] && break
+done
+[ -x "$H" ] || H=$(command -v herdr 2>/dev/null) || : # SSH commands on a Mac get a PATH without Homebrew
+for c in "$HOME/.local/bin/herdr" /home/linuxbrew/.linuxbrew/bin/herdr /opt/homebrew/bin/herdr /usr/local/bin/herdr "$HOME/.nix-profile/bin/herdr"; do
   [ -x "$H" ] || H=$c # where herdr's own setup and package managers put it
 done
 [ -x "$H" ] || { echo "=err herdr isn't installed on this machine"; exit 0; }
@@ -129,14 +132,15 @@ function applyScript(on, m, before, after) {
   const b64 = (/** @type {string} */ s) => Buffer.from(s).toString("base64");
   const writeConfig = before === after ? "" : `
 mkdir -p "\${cfg%/*}"
-${after ? `printf %s ${sq(b64(after))} | base64 -d >"$cfg"` : `rm -f "$cfg" # nothing left but what we added`}
+${after ? `printf %s ${sq(b64(after))} | b64d >"$cfg"` : `rm -f "$cfg" # nothing left but what we added`}
 if ! out=$("$H" config check 2>&1); then
-  ${before === null ? `rm -f "$cfg"` : `printf %s ${sq(b64(before))} | base64 -d >"$cfg"`}
+  ${before === null ? `rm -f "$cfg"` : `printf %s ${sq(b64(before))} | b64d >"$cfg"`}
   fail "$(echo "$out" | tail -n 1)"
 fi
 changed=1`;
   return `set -u
 fail() { echo "=err $*"; exit 0; }
+b64d() { base64 -d 2>/dev/null || base64 -D; } # older macOS only knows -D; a bad flag exits before reading
 H=${sq(m.herdr)}
 root=${sq(m.root ?? "")}
 dir=${sq(m.dir)}
