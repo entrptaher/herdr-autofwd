@@ -6,7 +6,7 @@ name = "autofwd (server side)"
 version = "0.1.0"
 min_herdr_version = "0.9.0"
 description = "Opens the autofwd Ports panel while you view this machine. Managed by autofwd on your computer."
-platforms = ["linux"]
+platforms = ["linux", "macos"]
 
 [[actions]]
 id = "ports"
